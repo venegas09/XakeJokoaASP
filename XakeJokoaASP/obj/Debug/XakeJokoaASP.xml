@@ -1,0 +1,860 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+XakeJokoaASP
+</name>
+</assembly>
+<members>
+<member name="T:XakeJokoaASP.My.MyWebExtension">
+ <summary>
+ Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:XakeJokoaASP.My.MyWebExtension.Computer">
+ <summary>
+ Devuelve información sobre el equipo host.
+ </summary>
+</member>
+<member name="P:XakeJokoaASP.My.MyWebExtension.User">
+ <summary>
+ Devuelve información del usuario web actual.
+ </summary>
+</member>
+<member name="P:XakeJokoaASP.My.MyWebExtension.Request">
+ <summary>
+ Devuelve un objeto Request.
+ </summary>
+</member>
+<member name="P:XakeJokoaASP.My.MyWebExtension.Response">
+ <summary>
+ Devuelve un objeto Response.
+ </summary>
+</member>
+<member name="P:XakeJokoaASP.My.MyWebExtension.Log">
+ <summary>
+ Devuelve el objeto de registro Asp.
+ </summary>
+</member>
+<member name="T:XakeJokoaASP.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Alfila_B">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Alfila_T">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.AukeratuB">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.AukeratuT">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.backgroundHasiera">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Dorrea_B">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Dorrea_T">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Erregea_B">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Erregea_T">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Erregina_B">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Erregina_T">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.gelaxkaBeltza">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.gelaxkaTxuria">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Peoia_B">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Peoia_T">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.posibleB">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.posibleT">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.XakeTaula">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Zaldia_B">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.Zaldia_T">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="F:XakeJokoaASP.Hasiera._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Hasiera._btnJokatu">
+<summary>
+Control btnJokatu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Panel1">
+<summary>
+Control Panel1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Panel3">
+<summary>
+Control Panel3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a8">
+<summary>
+Control a8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b8">
+<summary>
+Control b8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c8">
+<summary>
+Control c8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d8">
+<summary>
+Control d8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e8">
+<summary>
+Control e8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f8">
+<summary>
+Control f8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g8">
+<summary>
+Control g8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h8">
+<summary>
+Control h8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a7">
+<summary>
+Control a7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b7">
+<summary>
+Control b7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c7">
+<summary>
+Control c7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d7">
+<summary>
+Control d7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e7">
+<summary>
+Control e7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f7">
+<summary>
+Control f7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g7">
+<summary>
+Control g7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h7">
+<summary>
+Control h7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a6">
+<summary>
+Control a6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b6">
+<summary>
+Control b6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c6">
+<summary>
+Control c6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d6">
+<summary>
+Control d6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e6">
+<summary>
+Control e6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f6">
+<summary>
+Control f6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g6">
+<summary>
+Control g6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h6">
+<summary>
+Control h6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a5">
+<summary>
+Control a5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b5">
+<summary>
+Control b5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c5">
+<summary>
+Control c5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d5">
+<summary>
+Control d5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e5">
+<summary>
+Control e5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f5">
+<summary>
+Control f5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g5">
+<summary>
+Control g5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h5">
+<summary>
+Control h5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a4">
+<summary>
+Control a4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b4">
+<summary>
+Control b4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c4">
+<summary>
+Control c4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d4">
+<summary>
+Control d4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e4">
+<summary>
+Control e4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f4">
+<summary>
+Control f4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g4">
+<summary>
+Control g4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h4">
+<summary>
+Control h4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a3">
+<summary>
+Control a3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b3">
+<summary>
+Control b3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c3">
+<summary>
+Control c3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d3">
+<summary>
+Control d3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e3">
+<summary>
+Control e3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f3">
+<summary>
+Control f3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g3">
+<summary>
+Control g3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h3">
+<summary>
+Control h3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a2">
+<summary>
+Control a2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b2">
+<summary>
+Control b2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c2">
+<summary>
+Control c2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d2">
+<summary>
+Control d2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e2">
+<summary>
+Control e2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f2">
+<summary>
+Control f2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g2">
+<summary>
+Control g2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h2">
+<summary>
+Control h2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._a1">
+<summary>
+Control a1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._b1">
+<summary>
+Control b1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._c1">
+<summary>
+Control c1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._d1">
+<summary>
+Control d1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._e1">
+<summary>
+Control e1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._f1">
+<summary>
+Control f1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._g1">
+<summary>
+Control g1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._h1">
+<summary>
+Control h1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Mugimendua.Aurrera">
+ <summary>
+ Número de posiciones a avanzar hacia adelante
+ Si se mueve hacia atrás el valor será negativo
+ El movimiento se realizará hacia arriba o haciaa abajo en función
+ del color de la pieza a la que se aplica
+ </summary>
+</member>
+<member name="F:XakeJokoaASP.Mugimendua.Eskubira">
+ <summary>
+ Número de posiciones a mover hacia la derecha
+ Si el movimiento es hacia la izquierda el valor será negativo
+ </summary>
+</member>
+<member name="P:XakeJokoaASP.XakePartida.SelectedSquare">
+ <summary>
+ Devuelve la celda seleccionada por el usuario
+ </summary>
+</member>
+<member name="M:XakeJokoaASP.XakePartida.Start(XakeJokoaASP.Koloreak)">
+ <summary>
+ Inicia un nuevo juego disponiendo las piezas del color indicado
+ en la parte superior del tablero
+ </summary>
+ <param name="playerOnTop">Color de las piezas de la parte superior del tablero</param>
+</member>
+<member name="M:XakeJokoaASP.XakePartida.SelectPiece(XakeJokoaASP.Gelaxka)">
+ <summary>
+ Selecciona la celda indicada como celda inicio del movimiento
+ </summary>
+ <param name="squareToSelect">Celda a seleccionar</param>
+ <returns>true o false indicando si se ha realizado la selección
+ El juego debe estar pendiente de iniciar un movimiento y la celda ser una de
+ las celdas seleccionables</returns>
+</member>
+<member name="M:XakeJokoaASP.XakePartida.UnselectPiece">
+ <summary>
+ Deselecciona la celda actualmente seleccionada
+ </summary>
+ <returns>true o false indicando si se ha realizado la deselección
+ Para que exista celda seleccionada el juego debe estar pediente de finalizar movimiento</returns>
+</member>
+<member name="M:XakeJokoaASP.XakePartida.PosibleDestinationSquares(XakeJokoaASP.Gelaxka)">
+ <summary>
+ Devuelve las celdas que pueden ser destino del movimiento en función
+ de la celda actualmente seleccionada.
+ Los posibles destinos dependen de la pieza contenida en la celda seleccionada.
+ </summary>
+ <returns>Las celdas que pueden ser destino del movimiento</returns>
+</member>
+<member name="M:XakeJokoaASP.XakePartida.MoveToSquare(XakeJokoaASP.Gelaxka)">
+ <summary>
+ Ejecuta el movimiento desde la celda seleccionada a la 
+ celda indicada
+ </summary>
+ <param name="squareToMove">Celda destino del movimiento</param>
+ <returns>true o false en función de si se ha podido realizar
+ el movimiento</returns>
+</member>
+<member name="M:XakeJokoaASP.XakePartida.CheckForWin">
+ <returns>true o false indicando si el juego ha finalizado</returns>
+</member>
+<member name="M:XakeJokoaASP.XakeTaula.Init(XakeJokoaASP.Koloreak)">
+ <summary>
+ Inicializa el tablero de juego colocando las piezas en su posición inicial
+ </summary>
+ <param name="colorOfTopPlayer">Color de las piezas a colocar en la parte
+ superior del tablero</param>
+</member>
+<member name="M:XakeJokoaASP.XakeTaula.Move(XakeJokoaASP.Gelaxka,XakeJokoaASP.Gelaxka)">
+ <summary>
+ Mueve una pieza de una celda a otra
+ </summary>
+ <param name="fromSquare">Celda desde la que se realiza el movimiento</param>
+ <param name="toSquare">Celda destino del movimiento</param>
+ <returns>true o false indicando si el movimiento se ha realizado</returns>
+</member>
+<member name="M:XakeJokoaASP.XakeTaula.ClearPieces">
+ <summary>
+ Elimmina todas las piezas del tablero
+ </summary>
+</member>
+</members>
+</doc>
