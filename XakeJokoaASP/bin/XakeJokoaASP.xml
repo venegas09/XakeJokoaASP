@@ -138,6 +138,11 @@ XakeJokoaASP
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.transparente">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:XakeJokoaASP.My.Resources.Resources.XakeTaula">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -207,9 +212,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia8">
+<summary>
+Control Ia8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b8">
 <summary>
 Control b8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib8">
+<summary>
+Control Ib8.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -225,9 +248,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic8">
+<summary>
+Control Ic8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d8">
 <summary>
 Control d8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id8">
+<summary>
+Control Id8.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -243,9 +284,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie8">
+<summary>
+Control Ie8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f8">
 <summary>
 Control f8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If8">
+<summary>
+Control If8.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -261,9 +320,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig8">
+<summary>
+Control Ig8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h8">
 <summary>
 Control h8.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._ih8">
+<summary>
+Control ih8.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -279,9 +356,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia7">
+<summary>
+Control Ia7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b7">
 <summary>
 Control b7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib7">
+<summary>
+Control Ib7.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -297,9 +392,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic7">
+<summary>
+Control Ic7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d7">
 <summary>
 Control d7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id7">
+<summary>
+Control Id7.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -315,9 +428,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie7">
+<summary>
+Control Ie7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f7">
 <summary>
 Control f7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If7">
+<summary>
+Control If7.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -333,9 +464,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig7">
+<summary>
+Control Ig7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h7">
 <summary>
 Control h7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ih7">
+<summary>
+Control Ih7.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -351,9 +500,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia6">
+<summary>
+Control Ia6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b6">
 <summary>
 Control b6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib6">
+<summary>
+Control Ib6.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -369,9 +536,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic6">
+<summary>
+Control Ic6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d6">
 <summary>
 Control d6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id6">
+<summary>
+Control Id6.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -387,9 +572,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie6">
+<summary>
+Control Ie6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f6">
 <summary>
 Control f6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If6">
+<summary>
+Control If6.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -405,9 +608,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig6">
+<summary>
+Control Ig6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h6">
 <summary>
 Control h6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ih6">
+<summary>
+Control Ih6.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -423,9 +644,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia5">
+<summary>
+Control Ia5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b5">
 <summary>
 Control b5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib5">
+<summary>
+Control Ib5.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -441,9 +680,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic5">
+<summary>
+Control Ic5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d5">
 <summary>
 Control d5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id5">
+<summary>
+Control Id5.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -459,9 +716,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie5">
+<summary>
+Control Ie5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f5">
 <summary>
 Control f5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If5">
+<summary>
+Control If5.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -477,9 +752,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig5">
+<summary>
+Control Ig5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h5">
 <summary>
 Control h5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ih5">
+<summary>
+Control Ih5.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -495,9 +788,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia4">
+<summary>
+Control Ia4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b4">
 <summary>
 Control b4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib4">
+<summary>
+Control Ib4.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -513,9 +824,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic4">
+<summary>
+Control Ic4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d4">
 <summary>
 Control d4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id4">
+<summary>
+Control Id4.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -531,9 +860,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie4">
+<summary>
+Control Ie4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f4">
 <summary>
 Control f4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If4">
+<summary>
+Control If4.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -549,9 +896,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig4">
+<summary>
+Control Ig4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h4">
 <summary>
 Control h4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ih4">
+<summary>
+Control Ih4.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -567,9 +932,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia3">
+<summary>
+Control Ia3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b3">
 <summary>
 Control b3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib3">
+<summary>
+Control Ib3.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -585,9 +968,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic3">
+<summary>
+Control Ic3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d3">
 <summary>
 Control d3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id3">
+<summary>
+Control Id3.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -603,9 +1004,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie3">
+<summary>
+Control Ie3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f3">
 <summary>
 Control f3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If3">
+<summary>
+Control If3.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -621,9 +1040,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig3">
+<summary>
+Control Ig3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h3">
 <summary>
 Control h3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ih3">
+<summary>
+Control Ih3.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -639,9 +1076,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia2">
+<summary>
+Control Ia2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b2">
 <summary>
 Control b2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib2">
+<summary>
+Control Ib2.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -657,9 +1112,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic2">
+<summary>
+Control Ic2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d2">
 <summary>
 Control d2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id2">
+<summary>
+Control Id2.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -675,9 +1148,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie2">
+<summary>
+Control Ie2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f2">
 <summary>
 Control f2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If2">
+<summary>
+Control If2.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -693,9 +1184,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig2">
+<summary>
+Control Ig2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h2">
 <summary>
 Control h2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ih2">
+<summary>
+Control Ih2.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -711,9 +1220,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ia1">
+<summary>
+Control Ia1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._b1">
 <summary>
 Control b1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ib1">
+<summary>
+Control Ib1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -729,9 +1256,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ic1">
+<summary>
+Control Ic1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._d1">
 <summary>
 Control d1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Id1">
+<summary>
+Control Id1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -747,9 +1292,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ie1">
+<summary>
+Control Ie1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._f1">
 <summary>
 Control f1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._If1">
+<summary>
+Control If1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -765,9 +1328,72 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._Ig1">
+<summary>
+Control Ig1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._h1">
 <summary>
 Control h1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._Ih1">
+<summary>
+Control Ih1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._rdKol">
+<summary>
+Control rdKol.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._btnHasi">
+<summary>
+Control btnHasi.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._btnErrenditu">
+<summary>
+Control btnErrenditu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._btnTablas">
+<summary>
+Control btnTablas.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._txtXake">
+<summary>
+Control txtXake.
 </summary>
 <remarks>
 Campo generado automáticamente.

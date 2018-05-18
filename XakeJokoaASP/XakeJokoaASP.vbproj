@@ -112,6 +112,7 @@
     <Content Include="resources\Peoia_T.png" />
     <Content Include="resources\posibleB.JPG" />
     <Content Include="resources\posibleT.JPG" />
+    <Content Include="resources\transparente.png" />
     <Content Include="resources\XakeTaula.png" />
     <Content Include="resources\Zaldia_B.png" />
     <Content Include="resources\Zaldia_T.png" />
