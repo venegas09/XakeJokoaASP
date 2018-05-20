@@ -42,9 +42,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+               <ContentTemplate>
+                     <fieldset>
+                     <legend hidden="hidden">UpdatePanel1</legend>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">
+                    
                     <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/resources/XakeTaula.png" Height="743px" Width="743px">
                         <asp:Panel ID="Panel3" runat="server" CssClass="auto-style4" Height="640px" Width="640px">
                             <table cellpadding="0" cellspacing="0" class="auto-style1">
@@ -386,8 +392,8 @@
                                 </tr>
                             </table>
                         </asp:Panel>
-
                     </asp:Panel>
+                        
                 </td>
                 <td class="auto-style3">
                     <asp:RadioButtonList ID="rdKol" runat="server" Width="124px">
@@ -404,9 +410,15 @@
                     <br />
                     <br />
                     <asp:Label ID="txtXake" runat="server"></asp:Label>
+                    <asp:Label ID="proba" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="proba2" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="proba3" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
         </table>
+             </fieldset>
+         </ContentTemplate>
+      </asp:UpdatePanel>
     </form>
 </body>
 </html>

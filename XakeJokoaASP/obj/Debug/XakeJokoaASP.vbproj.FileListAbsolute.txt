@@ -4,7 +4,6 @@ C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaAS
 C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\bin\XakeJokoaASP.xml
 C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\obj\Debug\XakeJokoaASP.vbprojResolveAssemblyReference.cache
 C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\obj\Debug\XakeJokoaASP.Resources.resources
 C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\obj\Debug\XakeJokoaASP.vbproj.GenerateResource.Cache
 C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\obj\Debug\XakeJokoaASP.vbproj.CoreCompileInputs.cache
@@ -24,3 +23,5 @@ C:\Users\Xabi\Desktop\SGTAProiektua\ASPXakeJokoa\XakeJokoaASP\obj\Debug\XakeJoko
 C:\Users\Xabi\Desktop\SGTAProiektua\ASPXakeJokoa\XakeJokoaASP\obj\Debug\XakeJokoaASP.dll
 C:\Users\Xabi\Desktop\SGTAProiektua\ASPXakeJokoa\XakeJokoaASP\obj\Debug\XakeJokoaASP.xml
 C:\Users\Xabi\Desktop\SGTAProiektua\ASPXakeJokoa\XakeJokoaASP\obj\Debug\XakeJokoaASP.pdb
+C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\obj\Debug\XakeJokoaASP.vbprojAssemblyReference.cache
+C:\Users\ruben\Desktop\Ruben\Universidad\3.Curso\2.Cuatrimestre\SGTA\XakeJokoaASP\XakeJokoaASP\obj\Debug\XakeJokoaASP.vbproj.CopyComplete

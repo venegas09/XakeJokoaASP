@@ -185,6 +185,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._ScriptManager1">
+<summary>
+Control ScriptManager1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._UpdatePanel1">
+<summary>
+Control UpdatePanel1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._Panel1">
 <summary>
 Control Panel1.
@@ -1394,6 +1412,33 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:XakeJokoaASP.Jokatu._txtXake">
 <summary>
 Control txtXake.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._proba">
+<summary>
+Control proba.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._proba2">
+<summary>
+Control proba2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._proba3">
+<summary>
+Control proba3.
 </summary>
 <remarks>
 Campo generado automáticamente.
