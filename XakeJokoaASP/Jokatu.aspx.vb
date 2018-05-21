@@ -2,7 +2,11 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        If Not IsPostBack Then
+            Panel3.Enabled = False
+            btnErrenditu.Enabled = False
+            btnTablas.Enabled = False
+        End If
     End Sub
 
     Protected Sub Ia1_Click(sender As Object, e As ImageClickEventArgs) Handles Ia1.Click
@@ -265,7 +269,6 @@
         End If
         If Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten Or Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten Then
             If Session("partida").GetSquaresThatCanBeSelected().Contains(aukeratutakoGelaxka) Then
-
                 Session("partida").SelectPiece(aukeratutakoGelaxka)
                 MarraztuAukeratutakoGelaxka(aukeratutakoGelaxka)
                 Session("MarraztutakoGelaxkak") = Session("partida").PosibleDestinationSquares(Session("partida").SelectedSquare)
@@ -313,9 +316,7 @@
                             txtXake.Text = "Erregea itota dago"
                         End If
                     End If
-
                 Else
-
                     EzabatuAukeratutakoGelaxka(gelaxkaZaharra)
                     MarrazkiaKendu()
                     Session("MarraztutakoGelaxkak").Clear()
@@ -574,7 +575,7 @@
             g2.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
         End If
         If laukia.Ilara = 2 And laukia.Zutabea = 8 Then
-            h2.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+            h2.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
         End If
         '3 ILARA
         If laukia.Ilara = 3 And laukia.Zutabea = 1 Then
@@ -1436,6 +1437,7 @@
     End Sub
 
     Protected Sub btnHasi_Click(sender As Object, e As EventArgs) Handles btnHasi.Click
+        Panel3.Enabled = True
         Dim Partida As New XakePartida()
         Session("partida") = Partida
         Dim MarraztutakoGelaxkak As New List(Of Gelaxka)
