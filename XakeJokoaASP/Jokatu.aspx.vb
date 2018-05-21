@@ -1,8 +1,6 @@
 ﻿Public Class Jokatu
     Inherits System.Web.UI.Page
-    Private Partida As New XakePartida()
-    Private MarraztutakoGelaxkak As New List(Of Gelaxka)
-    Private AukeratutakoBox As New Object()
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -260,106 +258,679 @@
     End Sub
 
     Public Sub Tratatu(i As Integer, z As Integer, sender As Object)
-        Dim aukeratutakoGelaxka As Gelaxka = Partida.Taula.gelaxkaLortu(i, z)
-        If Partida.Egoera = PartidarenEgoera.TxuriakWin Or Partida.Egoera = PartidarenEgoera.BeltzakWin Or Partida.Egoera = PartidarenEgoera.Berdinketa Then
+        Dim aukeratutakoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(i, z)
+        If Session("partida").Egoera = PartidarenEgoera.TxuriakWin Or Session("partida").Egoera = PartidarenEgoera.BeltzakWin Or Session("partida").Egoera = PartidarenEgoera.Berdinketa Then
             txtXake.Text = "Hasi partida berri bat"
             btnHasi.Enabled = True
         End If
-        If Partida.Egoera = PartidarenEgoera.TxurieiItxoiten Or Partida.Egoera = PartidarenEgoera.BeltzeiItxoiten Then
-            'Pruebas
-            Dim erantz As String
-            For Each gelaxka As Gelaxka In Partida.GetSquaresThatCanBeSelected
-                erantz = erantz + "Z: " + gelaxka.Zutabea.ToString + " I: " + gelaxka.Ilara.ToString + " // "
-            Next
-            proba.Text = erantz
-            proba2.Text = ""
-            proba3.Text = ""
-            '#####
-            If Partida.GetSquaresThatCanBeSelected().Contains(aukeratutakoGelaxka) Then
-                Partida.SelectPiece(aukeratutakoGelaxka)
-                AukeratutakoBox = sender
-                MarraztuAukeratutakoGelaxka()
-                MarraztutakoGelaxkak = Partida.PosibleDestinationSquares(Partida.SelectedSquare)
+        If Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten Or Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten Then
+            If Session("partida").GetSquaresThatCanBeSelected().Contains(aukeratutakoGelaxka) Then
+
+                Session("partida").SelectPiece(aukeratutakoGelaxka)
+                MarraztuAukeratutakoGelaxka(aukeratutakoGelaxka)
+                Session("MarraztutakoGelaxkak") = Session("partida").PosibleDestinationSquares(Session("partida").SelectedSquare)
                 Marraztu()
             End If
         Else
-
-            If Partida.Egoera = PartidarenEgoera.TxuriakWin Or Partida.Egoera = PartidarenEgoera.BeltzakWin Or Partida.Egoera = PartidarenEgoera.Berdinketa Then
+            If Session("partida").Egoera = PartidarenEgoera.TxuriakWin Or Session("partida").Egoera = PartidarenEgoera.BeltzakWin Or Session("partida").Egoera = PartidarenEgoera.Berdinketa Then
                 txtXake.Text = "Hasi partida berri bat"
                 btnHasi.Enabled = True
             Else
-                If MarraztutakoGelaxkak.Contains(aukeratutakoGelaxka) Then
-                    EzabatuAukeratutakoGelaxka()
+                Dim gelaxkaZaharra As Gelaxka
+                gelaxkaZaharra = Session("partida").SelectedSquare
+                If Session("MarraztutakoGelaxkak").Contains(aukeratutakoGelaxka) Then
+                    EzabatuAukeratutakoGelaxka(gelaxkaZaharra)
                     MarrazkiaKendu()
-                    If (Partida.SelectedSquare.Pieza.GetType().Name = "Peoia" And (aukeratutakoGelaxka.Ilara = 1 Or aukeratutakoGelaxka.Ilara = 8)) Then
-                        Partida.SelectedSquare.Pieza = New Erregina(Partida.SelectedSquare.Pieza.Kolorea)
+                    If (Session("partida").SelectedSquare.Pieza.GetType().Name = "Peoia" And (aukeratutakoGelaxka.Ilara = 1 Or aukeratutakoGelaxka.Ilara = 8)) Then
+                        Session("partida").SelectedSquare.Pieza = New Erregina(Session("partida").SelectedSquare.Pieza.Kolorea)
                     End If
                     Dim Enroke As Boolean
-                    Enroke = Partida.MoveToSquare(aukeratutakoGelaxka)
+                    Enroke = Session("partida").MoveToSquare(aukeratutakoGelaxka)
                     If Enroke Then
                         DorreaMugitu(aukeratutakoGelaxka)
                     End If
-                    PiezaMugitu(sender, aukeratutakoGelaxka)
-                    If Partida.Taula.XakeaDa(Partida.Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
+                    PiezaMugitu(sender, aukeratutakoGelaxka, gelaxkaZaharra)
+                    txtXake.Text = ""
+                    If Session("partida").Taula.XakeaDa(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                         txtXake.Text = "Xake"
-                        If Partida.Taula.MugimendurikEz(Partida.Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
+                        If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                             btnHasi.Enabled = True
-                            If Partida.Taula.gelaxkaLortu(i, z).Pieza.Kolorea = Koloreak.Txuria Then
-                                Partida.Egoera = PartidarenEgoera.TxuriakWin
+                            If Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea = Koloreak.Txuria Then
+                                Session("partida").Egoera = PartidarenEgoera.TxuriakWin
                                 txtXake.Text = "Txuriak Irabazi du"
                                 btnTablas.Enabled = False
+                                btnErrenditu.Enabled = False
                             Else
-                                Partida.Egoera = PartidarenEgoera.BeltzakWin
+                                Session("partida").Egoera = PartidarenEgoera.BeltzakWin
                                 txtXake.Text = "Beltzak irabazi du"
                                 btnTablas.Enabled = False
+                                btnErrenditu.Enabled = False
                             End If
-                            'Else
-                            ' If Partida.Egoera = PartidarenEgoera.BeltzeiItxoiten Then
-                            'txtTxanda.Text = "Beltzen txanda da"
-                            'Else
-                            'txtTxanda.Text = "Txurien txanda da"
-                            'End If
                         End If
                     Else
-                        If Partida.Taula.MugimendurikEz(Partida.Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
-                            Partida.Egoera = PartidarenEgoera.Berdinketa
+                        If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
+                            Session("partida").Egoera = PartidarenEgoera.Berdinketa
                             txtXake.Text = "Erregea itota dago"
-                            'Else
-                            ' If Partida.Egoera = PartidarenEgoera.BeltzeiItxoiten Then
-                            'txtTxanda.Text = "Beltzen txanda da"
-                            'Else
-                            'txtTxanda.Text = "Txurien txanda da"
-                            'End If
                         End If
                     End If
 
                 Else
-                    EzabatuAukeratutakoGelaxka()
+
+                    EzabatuAukeratutakoGelaxka(gelaxkaZaharra)
                     MarrazkiaKendu()
-                    MarraztutakoGelaxkak.Clear()
-                    Partida.UnselectPiece()
+                    Session("MarraztutakoGelaxkak").Clear()
+                    Session("partida").UnselectPiece()
                 End If
             End If
         End If
     End Sub
 
-    Public Sub MarraztuAukeratutakoGelaxka()
-        If ((Partida.SelectedSquare.Ilara + Partida.SelectedSquare.Zutabea) Mod 2 = 0) Then
-            AukeratutakoBox.ImageUrl = "~/resources/AukeratuB.JPG"
-        Else
-            AukeratutakoBox.ImageUrl = "~/resources/AukeratuT.JPG"
+    Public Sub MarraztuAukeratutakoGelaxka(laukia As Gelaxka)
+        If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
+            a1.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 2 Then
+            b1.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
+            c1.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 4 Then
+            d1.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 5 Then
+            e1.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 6 Then
+            f1.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 7 Then
+            g1.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 8 Then
+            h1.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        '2 ILARA
+        If laukia.Ilara = 2 And laukia.Zutabea = 1 Then
+            a2.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 2 Then
+            b2.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 3 Then
+            c2.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 4 Then
+            d2.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 5 Then
+            e2.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 6 Then
+            f2.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 7 Then
+            g2.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 8 Then
+            h2.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        '3 ILARA
+        If laukia.Ilara = 3 And laukia.Zutabea = 1 Then
+            a3.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 2 Then
+            b3.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 3 Then
+            c3.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 4 Then
+            d3.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 5 Then
+            e3.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 6 Then
+            f3.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 7 Then
+            g3.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 8 Then
+            h3.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        '4ILARA
+        If laukia.Ilara = 4 And laukia.Zutabea = 1 Then
+            a4.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 2 Then
+            b4.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 3 Then
+            c4.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 4 Then
+            d4.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 5 Then
+            e4.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 6 Then
+            f4.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 7 Then
+            g4.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 8 Then
+            h4.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        '5 ILARA
+        If laukia.Ilara = 5 And laukia.Zutabea = 1 Then
+            a5.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 2 Then
+            b5.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 3 Then
+            c5.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 4 Then
+            d5.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 5 Then
+            e5.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 6 Then
+            f5.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 7 Then
+            g5.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 8 Then
+            h5.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        '6 ILARA
+        If laukia.Ilara = 6 And laukia.Zutabea = 1 Then
+            a6.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 2 Then
+            b6.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 3 Then
+            c6.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 4 Then
+            d6.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 5 Then
+            e6.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 6 Then
+            f6.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 7 Then
+            g6.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 8 Then
+            h6.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        '7 ILARA
+        If laukia.Ilara = 7 And laukia.Zutabea = 1 Then
+            a7.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 2 Then
+            b7.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 3 Then
+            c7.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 4 Then
+            d7.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 5 Then
+            e7.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 6 Then
+            f7.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 7 Then
+            g7.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 8 Then
+            h7.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        '8 ILARA
+        If laukia.Ilara = 8 And laukia.Zutabea = 1 Then
+            a8.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 2 Then
+            b8.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 3 Then
+            c8.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 4 Then
+            d8.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 5 Then
+            e8.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 6 Then
+            f8.BackImageUrl = "~/resources/AukeratuB.JPG"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 7 Then
+            g8.BackImageUrl = "~/resources/AukeratuT.JPG"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 8 Then
+            h8.BackImageUrl = "~/resources/AukeratuB.JPG"
         End If
     End Sub
-    Public Sub EzabatuAukeratutakoGelaxka()
-        If ((Partida.SelectedSquare.Ilara + Partida.SelectedSquare.Zutabea) Mod 2 = 0) Then
-            AukeratutakoBox.ImageUrl = "~/resources/AukeratuB.JPG"
-        Else
-            AukeratutakoBox.ImageUrl = "~/resources/AukeratuT.JPG"
+    Public Sub EzabatuAukeratutakoGelaxka(laukia As Gelaxka)
+        If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
+            a1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 2 Then
+            b1.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
+            c1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 4 Then
+            d1.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 5 Then
+            e1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 6 Then
+            f1.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 7 Then
+            g1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 8 Then
+            h1.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        '2 ILARA
+        If laukia.Ilara = 2 And laukia.Zutabea = 1 Then
+            a2.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 2 Then
+            b2.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 3 Then
+            c2.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 4 Then
+            d2.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 5 Then
+            e2.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 6 Then
+            f2.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 7 Then
+            g2.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 8 Then
+            h2.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        '3 ILARA
+        If laukia.Ilara = 3 And laukia.Zutabea = 1 Then
+            a3.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 2 Then
+            b3.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 3 Then
+            c3.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 4 Then
+            d3.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 5 Then
+            e3.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 6 Then
+            f3.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 7 Then
+            g3.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 8 Then
+            h3.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        '4ILARA
+        If laukia.Ilara = 4 And laukia.Zutabea = 1 Then
+            a4.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 2 Then
+            b4.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 3 Then
+            c4.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 4 Then
+            d4.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 5 Then
+            e4.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 6 Then
+            f4.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 7 Then
+            g4.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 8 Then
+            h4.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        '5 ILARA
+        If laukia.Ilara = 5 And laukia.Zutabea = 1 Then
+            a5.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 2 Then
+            b5.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 3 Then
+            c5.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 4 Then
+            d5.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 5 Then
+            e5.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 6 Then
+            f5.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 7 Then
+            g5.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 8 Then
+            h5.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        '6 ILARA
+        If laukia.Ilara = 6 And laukia.Zutabea = 1 Then
+            a6.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 2 Then
+            b6.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 3 Then
+            c6.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 4 Then
+            d6.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 5 Then
+            e6.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 6 Then
+            f6.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 7 Then
+            g6.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 8 Then
+            h6.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        '7 ILARA
+        If laukia.Ilara = 7 And laukia.Zutabea = 1 Then
+            a7.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 2 Then
+            b7.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 3 Then
+            c7.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 4 Then
+            d7.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 5 Then
+            e7.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 6 Then
+            f7.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 7 Then
+            g7.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 8 Then
+            h7.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        '8 ILARA
+        If laukia.Ilara = 8 And laukia.Zutabea = 1 Then
+            a8.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 2 Then
+            b8.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 3 Then
+            c8.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 4 Then
+            d8.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 5 Then
+            e8.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 6 Then
+            f8.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 7 Then
+            g8.BackImageUrl = "~/resources/gelaxkaTxuria.jpeg"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 8 Then
+            h8.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
+        End If
+    End Sub
+    Public Sub PiezaEzabatu(laukia As Gelaxka)
+        If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
+            Ia1.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 2 Then
+            Ib1.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
+            Ic1.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 4 Then
+            Id1.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 5 Then
+            Ie1.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 6 Then
+            If1.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 7 Then
+            Ig1.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 8 Then
+            Ih1.ImageUrl = "~/resources/transparente.png"
+        End If
+        '2 ILARA
+        If laukia.Ilara = 2 And laukia.Zutabea = 1 Then
+            Ia2.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 2 Then
+            Ib2.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 3 Then
+            Ic2.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 4 Then
+            Id2.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 5 Then
+            Ie2.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 6 Then
+            If2.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 7 Then
+            Ig2.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 8 Then
+            Ih2.ImageUrl = "~/resources/transparente.png"
+        End If
+        '3 ILARA
+        If laukia.Ilara = 3 And laukia.Zutabea = 1 Then
+            Ia3.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 2 Then
+            Ib3.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 3 Then
+            Ic3.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 4 Then
+            Id3.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 5 Then
+            Ie3.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 6 Then
+            If3.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 7 Then
+            Ig3.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 8 Then
+            Ih3.ImageUrl = "~/resources/transparente.png"
+        End If
+        '4ILARA
+        If laukia.Ilara = 4 And laukia.Zutabea = 1 Then
+            Ia4.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 2 Then
+            Ib4.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 3 Then
+            Ic4.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 4 Then
+            Id4.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 5 Then
+            Ie4.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 6 Then
+            If4.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 7 Then
+            Ig4.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 8 Then
+            Ih4.ImageUrl = "~/resources/transparente.png"
+        End If
+        '5 ILARA
+        If laukia.Ilara = 5 And laukia.Zutabea = 1 Then
+            Ia5.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 2 Then
+            Ib5.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 3 Then
+            Ic5.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 4 Then
+            Id5.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 5 Then
+            Ie5.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 6 Then
+            If5.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 7 Then
+            Ig5.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 8 Then
+            Ih5.ImageUrl = "~/resources/transparente.png"
+        End If
+        '6 ILARA
+        If laukia.Ilara = 6 And laukia.Zutabea = 1 Then
+            Ia6.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 2 Then
+            Ib6.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 3 Then
+            Ic6.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 4 Then
+            Id6.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 5 Then
+            Ie6.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 6 Then
+            If6.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 7 Then
+            Ig6.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 8 Then
+            Ih6.ImageUrl = "~/resources/transparente.png"
+        End If
+        '7 ILARA
+        If laukia.Ilara = 7 And laukia.Zutabea = 1 Then
+            Ia7.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 2 Then
+            Ib7.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 3 Then
+            Ic7.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 4 Then
+            Id7.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 5 Then
+            Ie7.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 6 Then
+            If7.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 7 Then
+            Ig7.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 8 Then
+            Ih7.ImageUrl = "~/resources/transparente.png"
+        End If
+        '8 ILARA
+        If laukia.Ilara = 8 And laukia.Zutabea = 1 Then
+            Ia8.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 2 Then
+            Ib8.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 3 Then
+            Ic8.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 4 Then
+            Id8.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 5 Then
+            Ie8.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 6 Then
+            If8.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 7 Then
+            Ig8.ImageUrl = "~/resources/transparente.png"
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 8 Then
+            ih8.ImageUrl = "~/resources/transparente.png"
         End If
     End Sub
 
     Public Sub Marraztu()
-        For Each laukia As Gelaxka In MarraztutakoGelaxkak
+        For Each laukia As Gelaxka In Session("MarraztutakoGelaxkak")
             '1 ILARA
             If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
                 a1.BackImageUrl = "~/resources/posibleB.JPG"
@@ -563,7 +1134,7 @@
         Next
     End Sub
     Public Sub MarrazkiaKendu()
-        For Each laukia As Gelaxka In MarraztutakoGelaxkak
+        For Each laukia As Gelaxka In Session("MarraztutakoGelaxkak")
             '1 ILARA
             If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
                 a1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
@@ -767,10 +1338,10 @@
         Next
     End Sub
 
-    Public Sub PiezaMugitu(sender As Object, aukeratutakoGelaxka As Gelaxka)
+    Public Sub PiezaMugitu(sender As Object, aukeratutakoGelaxka As Gelaxka, gelaxkaZaharra As Gelaxka)
         Dim irudia As String = String.Format("{0}_{1}", aukeratutakoGelaxka.Pieza.GetType().Name, IIf([Enum].GetName(GetType(Koloreak), aukeratutakoGelaxka.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
         sender.ImageUrl = "~/resources/" + irudia + ".png"
-        AukeratutakoBox.ImageUrl = "~/resources/transparente.png"
+        PiezaEzabatu(gelaxkaZaharra)
     End Sub
     Public Sub DorreaMugitu(aukeratutakoGelaxka As Gelaxka)
         Dim taula = aukeratutakoGelaxka.Taula
@@ -811,40 +1382,39 @@
             End If
         End If
     End Sub
-
     Public Sub DorreaJarri(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            Ic1.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            Ic1.ImageUrl = "~/resources/" + irudia + ".png"
         End If
         If laukia.Ilara = 1 And laukia.Zutabea = 4 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            Id1.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            Id1.ImageUrl = "~/resources/" + irudia + ".png"
         End If
         If laukia.Ilara = 1 And laukia.Zutabea = 5 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            Ie1.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            Ie1.ImageUrl = "~/resources/" + irudia + ".png"
         End If
         If laukia.Ilara = 1 And laukia.Zutabea = 6 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            If1.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            If1.ImageUrl = "~/resources/" + irudia + ".png"
         End If
         '8 ILARA
         If laukia.Ilara = 8 And laukia.Zutabea = 3 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            Ic8.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            Ic8.ImageUrl = "~/resources/" + irudia + ".png"
         End If
         If laukia.Ilara = 8 And laukia.Zutabea = 4 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            Id8.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            Id8.ImageUrl = "~/resources/" + irudia + ".png"
         End If
         If laukia.Ilara = 8 And laukia.Zutabea = 5 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            Ie8.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            Ie8.ImageUrl = "~/resources/" + irudia + ".png"
         End If
         If laukia.Ilara = 8 And laukia.Zutabea = 6 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
-            If8.ImageUrl = My.Resources.ResourceManager.GetObject(irudia)
+            If8.ImageUrl = "~/resources/" + irudia + ".png"
         End If
     End Sub
     Public Sub DorreaKendu(Ilara As Integer, Zutabea As Integer)
@@ -866,16 +1436,25 @@
     End Sub
 
     Protected Sub btnHasi_Click(sender As Object, e As EventArgs) Handles btnHasi.Click
+        Dim Partida As New XakePartida()
+        Session("partida") = Partida
+        Dim MarraztutakoGelaxkak As New List(Of Gelaxka)
+        Session("MarraztutakoGelaxkak") = MarraztutakoGelaxkak
+        Dim AukeratutakoBox As New Object()
+        Session("AukeratutakoBox") = AukeratutakoBox
         Garbitu()
         LaukiakGarbitu()
         If rdKol.SelectedValue = "Txuriak" Then
-            Partida.Start(Koloreak.Txuria)
+            Session("partida").Start(Koloreak.Txuria)
+            pTablero.BackImageUrl = "~/resources/XakeTaula.png"
             Hasieratu(Koloreak.Txuria)
+            txtXake.Text = ""
         Else
-            Partida.Start(Koloreak.Beltza)
+            Session("partida").Start(Koloreak.Beltza)
+            pTablero.BackImageUrl = "~/resources/XakeTaula2.png"
             Hasieratu(Koloreak.Beltza)
+            txtXake.Text = ""
         End If
-        txtXake.Text = "Txurien txanda"
         btnHasi.Enabled = False
         btnTablas.Enabled = True
         btnErrenditu.Enabled = True
@@ -883,20 +1462,20 @@
 
     Protected Sub btnErrenditu_Click(sender As Object, e As EventArgs) Handles btnErrenditu.Click
         btnHasi.Enabled = True
-        If Partida.Egoera = PartidarenEgoera.BeltzakMugitzen Or Partida.Egoera = PartidarenEgoera.BeltzeiItxoiten Then
+        If Session("partida").Egoera = PartidarenEgoera.BeltzakMugitzen Or Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten Then
             txtXake.Text = "Txuriek irabazi dute"
-            Partida.Egoera = PartidarenEgoera.TxuriakWin
+            Session("partida").Egoera = PartidarenEgoera.TxuriakWin
 
         Else
             txtXake.Text = "Beltzek irabazi dute"
-            Partida.Egoera = PartidarenEgoera.BeltzakWin
+            Session("partida").Egoera = PartidarenEgoera.BeltzakWin
         End If
         btnTablas.Enabled = False
         btnErrenditu.Enabled = False
     End Sub
 
     Protected Sub btnTablas_Click(sender As Object, e As EventArgs) Handles btnTablas.Click
-        Partida.Egoera = PartidarenEgoera.Berdinketa
+        Session("partida").Egoera = PartidarenEgoera.Berdinketa
         btnHasi.Enabled = True
         txtXake.Text = "Tablas adostu da"
         btnTablas.Enabled = False
@@ -969,7 +1548,7 @@
         Ih7.ImageUrl = "~/resources/transparente.png"
     End Sub
     Public Sub LaukiakGarbitu()
-        For Each laukia As Gelaxka In Partida.Taula
+        For Each laukia As Gelaxka In Session("partida").Taula
             '1 ILARA
             If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
                 a1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"

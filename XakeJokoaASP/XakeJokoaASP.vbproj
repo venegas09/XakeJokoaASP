@@ -106,6 +106,7 @@
     <Content Include="resources\Erregea_T.png" />
     <Content Include="resources\Erregina_B.png" />
     <Content Include="resources\Erregina_T.png" />
+    <Content Include="resources\fondoa.jpg" />
     <Content Include="resources\gelaxkaBeltza.jpeg" />
     <Content Include="resources\gelaxkaTxuria.jpeg" />
     <Content Include="resources\Peoia_B.png" />
@@ -114,6 +115,7 @@
     <Content Include="resources\posibleT.JPG" />
     <Content Include="resources\transparente.png" />
     <Content Include="resources\XakeTaula.png" />
+    <Content Include="resources\XakeTaula2.png" />
     <Content Include="resources\Zaldia_B.png" />
     <Content Include="resources\Zaldia_T.png" />
     <Content Include="Web.config" />

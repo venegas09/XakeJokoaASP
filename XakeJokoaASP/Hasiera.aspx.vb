@@ -6,6 +6,7 @@
     End Sub
 
     Protected Sub Button1_Click1(sender As Object, e As EventArgs) Handles btnJokatu.Click
-        Response.Redirect("Jokatu.aspx")
+        Response.Redirect("Jokatu.aspx", False)
+        Context.ApplicationInstance.CompleteRequest()
     End Sub
 End Class

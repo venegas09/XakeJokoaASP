@@ -108,6 +108,11 @@ XakeJokoaASP
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.fondoa">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:XakeJokoaASP.My.Resources.Resources.gelaxkaBeltza">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -144,6 +149,11 @@ XakeJokoaASP
 </summary>
 </member>
 <member name="P:XakeJokoaASP.My.Resources.Resources.XakeTaula">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.XakeTaula2">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -203,9 +213,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:XakeJokoaASP.Jokatu._Panel1">
+<member name="F:XakeJokoaASP.Jokatu._pTablero">
 <summary>
-Control Panel1.
+Control pTablero.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1373,6 +1383,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:XakeJokoaASP.Jokatu._pAukerak">
+<summary>
+Control pAukerak.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Jokatu._rdKol">
 <summary>
 Control rdKol.
@@ -1412,33 +1431,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:XakeJokoaASP.Jokatu._txtXake">
 <summary>
 Control txtXake.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:XakeJokoaASP.Jokatu._proba">
-<summary>
-Control proba.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:XakeJokoaASP.Jokatu._proba2">
-<summary>
-Control proba2.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:XakeJokoaASP.Jokatu._proba3">
-<summary>
-Control proba3.
 </summary>
 <remarks>
 Campo generado automáticamente.
