@@ -93,7 +93,9 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Erronkak.aspx" />
     <Content Include="Hasiera.aspx" />
+    <Content Include="Irekierak.aspx" />
     <Content Include="Jokatu.aspx" />
     <Content Include="resources\Alfila_B.png" />
     <Content Include="resources\Alfila_T.png" />
@@ -121,11 +123,25 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Erronkak.aspx.designer.vb">
+      <DependentUpon>Erronkak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erronkak.aspx.vb">
+      <DependentUpon>Erronkak.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Hasiera.aspx.designer.vb">
       <DependentUpon>Hasiera.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hasiera.aspx.vb">
       <DependentUpon>Hasiera.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Irekierak.aspx.designer.vb">
+      <DependentUpon>Irekierak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Irekierak.aspx.vb">
+      <DependentUpon>Irekierak.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Jokatu.aspx.designer.vb">

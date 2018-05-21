@@ -168,6 +168,15 @@ XakeJokoaASP
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="F:XakeJokoaASP.Erronkak._form1">
+<summary>
+control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:XakeJokoaASP.Hasiera._form1">
 <summary>
 Control form1.
@@ -180,6 +189,33 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:XakeJokoaASP.Hasiera._btnJokatu">
 <summary>
 Control btnJokatu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Hasiera._btnErronkak">
+<summary>
+Control btnErronkak.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Hasiera._btnJokatu1">
+<summary>
+Control btnJokatu1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Irekierak._form1">
+<summary>
+control form1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1431,6 +1467,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:XakeJokoaASP.Jokatu._txtXake">
 <summary>
 Control txtXake.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Jokatu._btnItzuli">
+<summary>
+Control btnItzuli.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -1820,4 +1820,9 @@
             Ih7.ImageUrl = "~/resources/Peoia_T.png"
         End If
     End Sub
+
+    Protected Sub btnItzuli_Click(sender As Object, e As EventArgs) Handles btnItzuli.Click
+        Response.Redirect("Hasiera.aspx", False)
+        Context.ApplicationInstance.CompleteRequest()
+    End Sub
 End Class

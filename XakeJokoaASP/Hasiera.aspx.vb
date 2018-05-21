@@ -9,4 +9,14 @@
         Response.Redirect("Jokatu.aspx", False)
         Context.ApplicationInstance.CompleteRequest()
     End Sub
+
+    Protected Sub btnErronkak_Click(sender As Object, e As EventArgs) Handles btnErronkak.Click
+        Response.Redirect("Erronkak.aspx", False)
+        Context.ApplicationInstance.CompleteRequest()
+    End Sub
+
+    Protected Sub btnJokatu1_Click(sender As Object, e As EventArgs) Handles btnJokatu1.Click
+        Response.Redirect("Irekierak.aspx", False)
+        Context.ApplicationInstance.CompleteRequest()
+    End Sub
 End Class

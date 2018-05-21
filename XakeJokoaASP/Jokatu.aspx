@@ -420,7 +420,12 @@
                         <asp:Button ID="btnTablas" runat="server" Text="Tablas" Width="127px" Font-Bold="True" />
                         <br />
                         <br />
-                        </center><asp:Label ID="txtXake" runat="server" Font-Bold="True"></asp:Label></center>
+                        </center><asp:Label ID="txtXake" runat="server" Font-Bold="True"></asp:Label>
+                        <br />
+                        <br />
+                        </center>
+                        <br />
+                        <asp:Button ID="btnItzuli" runat="server" Font-Bold="True" Text="Menura itzuli" />
                     </asp:Panel>  
                 </td>
             </tr>
@@ -428,6 +433,8 @@
              </fieldset>
          </ContentTemplate>
       </asp:UpdatePanel>
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </form>
 </body>
 </html>

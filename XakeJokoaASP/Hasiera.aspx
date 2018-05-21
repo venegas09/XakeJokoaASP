@@ -10,10 +10,13 @@
         #form1 {
             height: 354px;
         }
+        .auto-style1 {
+            height: 442px;
+        }
     </style>
 </head>
 <body style="background:black url('resources/backgroundHasiera.jpeg') no-repeat center top; height: 364px;">
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="auto-style1">
         <div>
         </div>
         <br />
@@ -27,7 +30,19 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnJokatu" runat="server" Font-Size="XX-Large" Height="61px" Text="JOKATU" Width="155px" />
+        <asp:Button ID="btnJokatu" runat="server" Font-Size="XX-Large" Height="61px" Text="JOKATU" Width="189px" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnErronkak" runat="server" Font-Size="XX-Large" Height="61px" Text="ERRONKAK" Width="191px" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnJokatu1" runat="server" Font-Size="XX-Large" Height="61px" Text="IREKIERAK" Width="194px" />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
     </form>
 </body>
 </html>
