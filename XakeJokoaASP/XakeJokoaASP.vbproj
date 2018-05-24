@@ -93,9 +93,16 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Erronkak.aspx" />
+    <Content Include="Erronkak\Erronkak.aspx" />
+    <Content Include="Erronkak\Erronkak.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Erronkak\Mateak.aspx" />
     <Content Include="Hasiera.aspx" />
-    <Content Include="Irekierak.aspx" />
+    <Content Include="Irekierak\Hasierak.xml" />
+    <Content Include="Irekierak\IkusiIrekiera.aspx" />
+    <Content Include="Irekierak\Irekierak.aspx" />
+    <Content Include="resources\irekierak.jpg" />
     <Content Include="Jokatu.aspx" />
     <Content Include="resources\Alfila_B.png" />
     <Content Include="resources\Alfila_T.png" />
@@ -108,6 +115,7 @@
     <Content Include="resources\Erregea_T.png" />
     <Content Include="resources\Erregina_B.png" />
     <Content Include="resources\Erregina_T.png" />
+    <Content Include="resources\erronkakFondoa.png" />
     <Content Include="resources\fondoa.jpg" />
     <Content Include="resources\gelaxkaBeltza.jpeg" />
     <Content Include="resources\gelaxkaTxuria.jpeg" />
@@ -115,7 +123,11 @@
     <Content Include="resources\Peoia_T.png" />
     <Content Include="resources\posibleB.JPG" />
     <Content Include="resources\posibleT.JPG" />
+    <Content Include="resources\reto1.png" />
     <Content Include="resources\transparente.png" />
+    <Content Include="resources\xake1.jpg" />
+    <Content Include="resources\xake2.PNG" />
+    <Content Include="resources\xake3.PNG" />
     <Content Include="resources\XakeTaula.png" />
     <Content Include="resources\XakeTaula2.png" />
     <Content Include="resources\Zaldia_B.png" />
@@ -123,11 +135,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Erronkak.aspx.designer.vb">
+    <Compile Include="Erronkak\Erronkak.aspx.designer.vb">
       <DependentUpon>Erronkak.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Erronkak.aspx.vb">
+    <Compile Include="Erronkak\Erronkak.aspx.vb">
       <DependentUpon>Erronkak.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Erronkak\Mateak.aspx.designer.vb">
+      <DependentUpon>Mateak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erronkak\Mateak.aspx.vb">
+      <DependentUpon>Mateak.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Hasiera.aspx.designer.vb">
@@ -137,12 +156,19 @@
       <DependentUpon>Hasiera.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Irekierak.aspx.designer.vb">
+    <Compile Include="Irekierak\IkusiIrekiera.aspx.designer.vb">
+      <DependentUpon>IkusiIrekiera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Irekierak\IkusiIrekiera.aspx.vb">
+      <DependentUpon>IkusiIrekiera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Irekierak\Irekierak.aspx.designer.vb">
       <DependentUpon>Irekierak.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Irekierak.aspx.vb">
+    <Compile Include="Irekierak\Irekierak.aspx.vb">
       <DependentUpon>Irekierak.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Jokatu.aspx.designer.vb">
       <DependentUpon>Jokatu.aspx</DependentUpon>

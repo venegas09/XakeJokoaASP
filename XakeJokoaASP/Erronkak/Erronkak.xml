@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<erronkak>
+    <erronka id="1">
+        <kolorea>Txuria</kolorea>
+        <desk>Mate eman behar duzu 2 mugimendutan.</desk>
+        <posizioa>
+            <pieza>TAf8</pieza>
+            <pieza>TEf6</pieza>
+            <pieza>TAg6</pieza>
+            <pieza>TPg7</pieza>
+            <pieza>BDg8</pieza>
+            <pieza>BEh6</pieza>
+        </posizioa>
+        <mugKop>2</mugKop>
+        <mugimenduak>
+            <mugimendua zenb="1">
+                <move>f8d6</move>
+                <moveAutom>g7g8</moveAutom>
+                <pista>Alfil bat mugitu behar duzu.</pista>
+			       </mugimendua>
+            <mugimendua zenb="2">
+                <move>d6f4</move>
+                <pista>Alfil bat mugitu behar duzu.</pista>
+			       </mugimendua>
+        </mugimenduak>
+    </erronka>
+    <erronka id="2">
+        <kolorea>Txuria</kolorea>
+        <desk>Mate eman behar duzu 3 mugimendutan.</desk>
+        <posizioa>
+            <pieza>TDc8</pieza>
+            <pieza>TEd7</pieza>
+            <pieza>TPd4</pieza>
+            <pieza>TQb1</pieza>
+            <pieza>BPa5</pieza>
+            <pieza>BPg2</pieza>
+			      <pieza>BEg7</pieza>
+        </posizioa>
+        <mugKop>3</mugKop>
+        <mugimenduak>
+            <mugimendua zenb="1">
+                <move>g2g1</move>
+                <pista>Dorrea mugitu behar duzu.</pista>
+			      </mugimendua>
+			      <mugimendua zenb="2">
+                <move>g7h8</move>
+                <pista>Erragina mugitu behar duzu.</pista>
+			      </mugimendua>
+        </mugimenduak>
+    </erronka>
+    <erronka id="3">
+        <kolorea>Txuria</kolorea>
+        <desk>Mate eman behar duzu 4 mugimendutan.</desk>
+        <posizioa>
+            <pieza>TZd5</pieza>
+            <pieza>TZe4</pieza>
+            <pieza>TAe5</pieza>
+            <pieza>TEe6</pieza>
+            <pieza>BEc8</pieza>
+        </posizioa>
+        <mugKop>4</mugKop>
+        <mugimenduak>
+            <mugimendua zenb="1">
+                <move>c8d8</move>
+                <pista>Zaldi bat mugitu behar duzu.</pista>
+			      </mugimendua>
+			      <mugimendua zenb="2">
+                <move>d8c8</move>
+                <pista>Erregea mugitu behar duzu.</pista>
+			      </mugimendua>
+			      <mugimendua zenb="3">
+                <move>c8d8</move>
+                <pista>Zaldi bat mugitu behar duzu.</pista>
+			      </mugimendua>
+        </mugimenduak>
+    </erronka>
+</erronkak>

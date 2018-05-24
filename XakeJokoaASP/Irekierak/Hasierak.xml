@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<irekierak>
+	<irekiera id="0" name="Irekiera Italiarra. Giuoco Piano">
+	    <mugimenduak>
+	        <hasierakoText>Irekitze italiarrak alfila c4tik ateratzea prestatzen du f7 puntua erasotu nahian, enrroke azkar bat egiteko asmoarekin jokatzen da. Beltzek irekitze honetan partida berdintzeko aukera erreza dute hasiera ondo ezagutuz gero, horregatik erabiliagoa da Irekiera Espainola, Rui Lopez bezela ere ezagutua.</hasierakoText>
+	        <mugimendua zenb="1">
+	            <move>e2e4</move>
+	            <text>Txuria peoia e4ra mugitzen dute.</text>
+	        </mugimendua>
+	        <mugimendua zenb="2">
+	            <move>e7e5</move>
+	            <text>Beltzek peoia e5era mugitzen erantzuten dute</text>
+	        </mugimendua>
+	        <mugimendua zenb="3">
+	            <move>g1f3</move>
+	            <text>Txuriek g-ko zaldia jokatzera ateratzen dute.</text>
+	        </mugimendua>
+	        <mugimendua zenb="4">
+	            <move>b8c6</move>
+	            <text>Beltzek damaren bandako zaldia jokatzera ateratzen dute bere lauki hoberenetik</text>
+	        </mugimendua>
+	        <mugimendua zenb="5">
+	            <move>f1c4</move>
+	            <text>Txuriek beraien alfila jokatzera ateratzen dute.</text>
+	        </mugimendua>
+	        <mugimendua zenb="6">
+	            <move>f8c5</move>
+	            <text>Beltzek alfila c5era mugitzen dute alfilak elkarren aurrean jarriz. Hemen amaitzen da hasiera hau.</text>
+	        </mugimendua>
+	        <mugimendua zenb="7">
+	            <move>c2c3</move>
+	            <text>Plana d4 jokatzea izango da. Bi peoik osatuko duten zentroa osatu nahian. Gainera c5eko alfilari erasotzean denbora bat lortuko dute. Beltzak oso zehatz jokatu beharko dute.</text>
+	        </mugimendua>
+	        <mugimendua zenb="8">
+	            <move>g8f6</move>
+	            <text>c3ko peoia mugitzeak zekarren ahultasuna azaleratzen du. Txuriek orain ez dute zaldia c3, e4-ko peoia defenditzen zuena.
+	             Jokatu zitezkeen beste jokaldi batzuk d6 eta Dama e7 dira.</text>
+	        </mugimendua>
+	        <mugimendua zenb="9">
+	            <move>d2d4</move>
+	            <text>Txuriek prestatuta zuten erasoa egiten dute zentroa lortzeko</text>
+	        </mugimendua>
+	        <mugimendua zenb="10">
+	            <move>e5xd4</move>
+	            <text>Beltzek peoia jan beharra dute.</text>
+	        </mugimendua>
+	        <mugimendua zenb="11">
+	            <move>c3xd4</move>
+	            <text>Txuriek peoia jaten erantzun behar dute. Beste aukera bat da e5 egitea.</text>
+	        </mugimendua>
+	        <mugimendua zenb="12">
+	            <move>c5b4</move>
+	            <text>Jaque hau ematea jokaldi hoberena da beste jokaldiekin konparatzen badugu.</text>
+	        </mugimendua>
+	        <mugimendua zenb="13">
+	            <move>b1c3</move>
+	            <text>Materiala sakrifikatzen da azkar enrokeatzearen truke.</text>
+	        </mugimendua>
+	        <mugimendua zenb="14">
+	            <move>f6xe4</move>
+	            <text>Beltzek materiala onartzen dute eta peoia jaten dute.</text>
+	        </mugimendua>
+	        <mugimendua zenb="15">
+	            <move>e1g1</move>
+	            <text>Txuriek erregea babesten dute enrrokearen bidez.</text>
+	        </mugimendua>
+	        <mugimendua zenb="16">
+	            <move>b4xc3</move>
+	            <text>Jokaldi honek txuriak dituen tranpak saihesten ditu.</text>
+	        </mugimendua>
+	        <mugimendua zenb="17">
+	            <move>d4d5</move>
+	            <text>Moller ataquea deitzen da, beltzek nahiz eta pieza bat gehio eduki, bat galdu egingo dute nahitaez</text>
+	        </mugimendua>
+	        <mugimendua zenb="18">
+	            <move>c3f6</move>
+	            <text>Beltzek duten jokaldi hoberena</text>
+	        </mugimendua>
+	        <mugimendua zenb="19">
+	            <move>f1e1</move>
+	            <text>Zaldi beltza orain ezin da mugitu eta erasotuta dago.</text>
+	        </mugimendua>
+	        <mugimendua zenb="20">
+	            <move>c6e7</move>
+	            <text>Erasotutako pieza bat erregea kubritzeko erabiltzen da.</text>
+	        </mugimendua>
+	        <mugimendua zenb="21">
+	            <move>e1xe4</move>
+	            <text>Txuriak pieza bat berreskuratzen du</text>
+	        </mugimendua>
+	        <mugimendua zenb="22">
+	            <move>d7d6</move>
+	            <text>Alfilari bidea uzteko</text>
+	        </mugimendua>
+	        <mugimendua zenb="23">
+	            <move>c1g5</move>
+	            <text>Alfila erasora ekiten du</text>
+	        </mugimendua>
+	        <mugimendua zenb="24">
+	            <move>f6xg5</move>
+	            <text>Beltzek aldaketa onartzen dute</text>
+	        </mugimendua>
+	        <mugimendua zenb="25">
+	            <move>f3xg5</move>
+	            <text>Orain zaldia da erasotzen hasten dena</text>
+	        </mugimendua>
+	        <mugimendua zenb="26">
+	            <move>h7h6</move>
+	            <text>Zaldia kanporatzeko jokaldia</text>
+	        </mugimendua>
+	        <mugimendua zenb="27">
+	            <move>d1e2</move>
+	            <text>Zaldia kentzea oso jokaldi txarra da.</text>
+	        </mugimendua>
+	        <mugimendua zenb="28">
+	            <move>h6xg5</move>
+	            <text>Zaldia jan behar da</text>
+	        </mugimendua>
+	        <mugimendua zenb="29">
+	            <move>a1e1</move>
+	            <text>e zutabean pieza guztiak e7 erasotzen dute.</text>
+	        </mugimendua>
+	        <mugimendua zenb="30">
+	            <move>c8e6</move>
+	            <text>Beltzak zaldia ordez alfila entregatzen du.</text>
+	        </mugimendua>
+	        <mugimendua zenb="31">
+	            <move>d5xe6</move>
+	            <text>Pieza onartu behar da.</text>
+	        </mugimendua>
+	        <mugimendua zenb="32">
+	            <move>f7f6</move>
+	            <text>Beltzak oso posizio solidoa du eta gainera peoi baten abantailarekin jokatuko du.</text>
+	        </mugimendua>
+	    </mugimenduak>   
+	</irekiera>
+    <irekiera id="1" name="Irekitze Espainola. Berlineko defentsa">
+        <mugimenduak>
+            <hasierakoText>Hasieran irekitze hau ez zen asko erabiltzen profesionalen mailan Vladimir Kramnik-ek 2000ko munduko txapelketan Kasparov-en aurka erabiltzen hasi zen arte. Geroztik askoz gehio erabiltzen hasi ziren ikusi zutelako beltzentzat aukera ona dela hasieran pixkat defenditzen egon eta gero aurrerago etsaia gainditzeko baliabide ugari eskaintzen dituelako</hasierakoText>
+            <mugimendua zenb="1">
+                <move>e2e4</move>
+                <text>Txuria peoia e4ra mugitzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="2">
+                <move>e7e5</move>
+                <text>Beltzek peoia e5era mugitzen erantzuten dute</text>
+            </mugimendua>
+            <mugimendua zenb="3">
+                <move>g1f3</move>
+                <text>Txuriek g-ko zaldia jokatzera ateratzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="4">
+                <move>b8c6</move>
+                <text>Beltzek damaren bandako zaldia jokatzera ateratzen dute bere lauki hoberenetik</text>
+            </mugimendua>
+            <mugimendua zenb="5">
+                <move>f1b5</move>
+                <text>Ideia da zaldiaren gainean klabada bat ezartzea, gainera zaldia jateko aukera dago, baina irekitze honetan hori ez da ideia.</text>
+            </mugimendua>
+            <mugimendua zenb="6">
+                <move>g8f6</move>
+                <text>Beltzek ez dute e5 peoia galtzeko arriskurik Axb5 ondoren eta lasai asko zaldia jokura ateratzeko aukera dute.</text>
+            </mugimendua>
+            <mugimendua zenb="7">
+                <move>e1g1</move>
+                <text>Jokaldi kritikoa da, gainontzeko jokaldiek ez dute ezer lortzen.</text>
+            </mugimendua>
+            <mugimendua zenb="8">
+                <move>f6xe4</move>
+                <text>Beltzak e4ko peoia jaten du.</text>
+            </mugimendua>
+            <mugimendua zenb="9">
+                <move>d2d4</move>
+                <text>Te1 jokaldi sinpleagoa dirudi, zentru irekiagoa bilatuz.</text>
+            </mugimendua>
+            <mugimendua zenb="10">
+                <move>e4d6</move>
+                <text>Gaur egun jokaldi jokatuena posizio honetan.</text>
+            </mugimendua>
+            <mugimendua zenb="11">
+                <move>b5xc6</move>
+                <text>dxe5,Cxb5,a4, era dibertigarria da linea printzipaletik irteteko</text>
+            </mugimendua>
+            <mugimendua zenb="12">
+                <move>d7xc6</move>
+                <text>d-ko peoiarekin b-koarekin baino hobe</text>
+            </mugimendua>
+            <mugimendua zenb="13">
+                <move>d4xe5</move>
+                <text>Peoia jan</text>
+            </mugimendua>
+            <mugimendua zenb="14">
+                <move>d6f5</move>
+                <text>Zaldia leku seguruago batera mugitzen da.</text>
+            </mugimendua>
+            <mugimendua zenb="15">
+                <move>d1xd8</move>
+                <text>Txuriek damak aldatzen dituzte, beltzaren enrokea zapuztuz</text>
+            </mugimendua>
+            <mugimendua zenb="16">
+                <move>e8xd8</move>
+                <text>Erregeak dama jan</text>
+            </mugimendua>
+            <mugimendua zenb="17">
+                <move>b1c3</move>
+                <text>Jokalarien artean situazio honetan jokaldi erabiliena</text>
+            </mugimendua>
+            <mugimendua zenb="18">
+                <move>c8d7</move>
+                <text>Dauden alternatiben artetik aukera bat da.</text>
+            </mugimendua>
+            <mugimendua zenb="19">
+                <move>h2h3</move>
+                <text>Cg4 eta g4rekin jarraituta, abantaila lortuz. Txurien zaldiak gelaxka onak dituzte,aldiz, errege beltzak babesa bilatu behar du..</text>
+            </mugimendua>    
+        </mugimenduak>   
+    </irekiera>
+    <irekiera id="2" name="Bi zaldien irekitzea">
+        <mugimenduak>
+            <hasierakoText>Irekitze hau txuriak f7-n egiten duten erasoan oinarritzen da. Ez dago f7 defenditzeko modu errazik, beraz beltzek berehalako eraso bat egin behar dute, ikusiko dugu horixe dala egiten dutena.</hasierakoText>
+            <mugimendua zenb="1">
+                <move>e2e4</move>
+                <text>Txuria peoia e4ra mugitzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="2">
+                <move>e7e5</move>
+                <text>Beltzek peoia e5era mugitzen erantzuten dute</text>
+            </mugimendua>
+            <mugimendua zenb="3">
+                <move>g1f3</move>
+                <text>Txuriek g-ko zaldia jokatzera ateratzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="4">
+                <move>b8c6</move>
+                <text>Beltzek damaren bandako zaldia jokatzera ateratzen dute bere lauki hoberenetik</text>
+            </mugimendua>
+            <mugimendua zenb="5">
+                <move>f1c4</move>
+                <text>Txuriek beraien alfila jokatzera ateratzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="6">
+                <move>g8f6</move>
+                <text>Nahiz eta Giuco Piano jarraitzeak ez dakar arazorik beltzentza, Zaldia f6-ra mugitzea posizio konplexuago bat dakar etsailari aurre egiteko aukera gehiago eskainiz.</text>
+            </mugimendua>
+            <mugimendua zenb="7">
+                <move>f3g5</move>
+                <text>Beltzak ez dute f7 defenditzeko era errezik</text>
+            </mugimendua>
+            <mugimendua zenb="8">
+                <move>d7d5</move>
+                <text>Zentrora eraso egitera era egoki bat da irekitzeak jokatzeko. Beltzentzat jokaldi hoberena da dudarik gabe.</text>
+            </mugimendua>
+            <mugimendua zenb="9">
+                <move>e4xd5</move>
+                <text>Peoia jan</text>
+            </mugimendua>
+            <mugimendua zenb="10">
+                <move>c6a5</move>
+                <text>Beltzek hainbat alternatiba dituzte, baina zalantzazkoak dira.</text>
+            </mugimendua>
+            <mugimendua zenb="11">
+                <move>c4b5</move>
+                <text>Alfila babesean jartzeaz aparte xake ematen da.</text>
+            </mugimendua>
+            <mugimendua zenb="12">
+                <move>c7c6</move>
+                <text>Xake babesteko aukera hoberena</text>
+            </mugimendua>
+            <mugimendua zenb="13">
+                <move>d5xc6</move>
+                <text>Peoia jan</text>
+            </mugimendua>
+            <mugimendua zenb="14">
+                <move>b7xc6</move>
+                <text>Zaldiarekin eutsita geratzen da peoia, zuriak derrigortuta daude alfila mugitzera.</text>
+            </mugimendua>
+            <mugimendua zenb="15">
+                <move>b5e2</move>
+                <text>Alfilarako leku seguruena e2 da.</text>
+            </mugimendua>
+            <mugimendua zenb="16">
+                <move>h7h6</move>
+                <text>Zaldia kanporatzen da.</text>
+            </mugimendua>
+            <mugimendua zenb="17">
+                <move>g5f3</move>
+                <text>Zaldia lehengo gelaxkara itzultzen da</text>
+            </mugimendua>
+            <mugimendua zenb="18">
+                <move>e5e4</move>
+                <text>Zaldia erasotzen da, horrela beltzak mugimenduak irabazten ditu txuriak zaldia mugitzen duen bitartean</text>
+            </mugimendua>
+            <mugimendua zenb="19">
+                <move>f3e5</move>
+                <text>Zaldiarentzat toki on bakarra.</text>
+            </mugimendua>
+            <mugimendua zenb="20">
+                <move>f8d6</move>
+                <text>Zaldi erasotzen jarraitzen da.</text>
+            </mugimendua>
+            <mugimendua zenb="20">
+                <move>d2d4</move>
+                <text>Zaldia alfilarengatik aldatzeko aukera eskaintzen zaio beltzari. Jarraitzeko bide bat hau da: 11. ...,exd3 12.Cxd3,Dc7 13.b3,0-0 beltzek konpentsazioa dute, garapen ona eta gelaxka aktiboak dituzte euren piezentzat.</text>
+            </mugimendua>         
+        </mugimenduak>   
+    </irekiera>
+    <irekiera id="3" name="Dama gambitoa. Cambridge Springs">
+        <mugimenduak>
+            <hasierakoText>Dama gambitoa partida posizionala bilatzen duten jokalarientzat pentsatuta dago. Txuriek agian partida batzuk galdu ditzakete modu pasiboan jokatzen badute. baina beste batzuetan piezak aldatzea lortu dezakete berdinketa lortzeko. Cambridge Springs bariantearekin beltzen piezak era aktiboagoan jokatzera irteteko aukera ematen zaie.</hasierakoText>
+            <mugimendua zenb="1">
+                <move>d2d4</move>
+                <text>Txuria peoia d4ra mugitzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="2">
+                <move>d7d5</move>
+                <text>Beltzek peoia d5era mugitzen erantzuten dute</text>
+            </mugimendua>
+            <mugimendua zenb="3">
+                <move>c2c4</move>
+                <text>Txuriek c4 egiten dute gambitoa eskainiz.</text>
+            </mugimendua>
+            <mugimendua zenb="4">
+                <move>e7e6</move>
+                <text>Beltzek ez dute gambitoa onartzen eta peoia defenditzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="5">
+                <move>b1c3</move>
+                <text>Txuriek zaldia ateratzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="6">
+                <move>g8f6</move>
+                <text>Beltzek baita beraien zaldi bat jokura ateratzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="7">
+                <move>c1g5</move>
+                <text>c1-eko alfilak zaldi beltza iltzatuta uzten du.</text>
+            </mugimendua>
+            <mugimendua zenb="8">
+                <move>b8d7</move>
+                <text>Beltzen plana alfila b4tik ateratzea izango da,beraz, puntu honetan ez dute e7n jartzen.</text>
+            </mugimendua>
+            <mugimendua zenb="9">
+                <move>e2e3</move>
+                <text>d4 ko peoia defendituz, ezin da d5-eko peoia jan nahiz eta peoi bat irabazten dela dirudien</text>
+            </mugimendua>
+            <mugimendua zenb="10">
+                <move>c7c6</move>
+                <text>Beltzek ere peoia defenditzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="11">
+                <move>g1f3</move>
+                <text>Txuriek zaldia ateratzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="12">
+                <move>d8a5</move>
+                <text>Jokaldi klabea, zaldia orain ez da iltzatuta egongo.</text>
+            </mugimendua>
+            <mugimendua zenb="13">
+                <move>f3d2</move>
+                <text>Tentsioa mantentzeko jokaldi egokia. Txuriak iltzapenetik irteten dira eta Cb3 prestatzen dute.</text>
+            </mugimendua>
+            <mugimendua zenb="14">
+                <move>f8b4</move>
+                <text>Zaldia erasotzea aukera egokiena da.</text>
+            </mugimendua>
+            <mugimendua zenb="15">
+                <move>d1c2</move>
+                <text>Zaldia defenditzeko.</text>
+            </mugimendua>
+            <mugimendua zenb="16">
+                <move>e8g8</move>
+                <text>Erregea babesten dute.</text>
+            </mugimendua>
+            <mugimendua zenb="17">
+                <move>f1e2</move>
+                <text>Ad3 jokaldi txarra da.</text>
+            </mugimendua>
+            <mugimendua zenb="18">
+                <move>e6e5</move>
+                <text>c5 ere beste jokaldi on bat da.</text>
+            </mugimendua>
+            <mugimendua zenb="19">
+                <move>e1g1</move>
+                <text>Arazorik gabe egin daiteke.</text>
+            </mugimendua>
+            <mugimendua zenb="20">
+                <move>e5xd4</move>
+                <text>Peoia jan.</text>
+            </mugimendua>
+            <mugimendua zenb="21">
+                <move>d2b3</move>
+                <text>Ez dago presarik peoia jateko, Dama erasotzean txanda bat irabazten da. Cxd4 eta gero txuriek abantaila mantentzen dute.</text>
+            </mugimendua>
+        </mugimenduak>   
+    </irekiera>
+</irekierak>
