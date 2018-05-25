@@ -3,16 +3,19 @@
 Public Class Xakeak
     Inherits System.Web.UI.Page
 
+    'Orria lehendabiziz kargatzean partida hasieratuko du
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Hasieratu()
         End If
     End Sub
 
+    'Partida hasieratuko du
     Protected Sub btnHasi_Click(sender As Object, e As EventArgs) Handles btnHasi.Click
         Hasieratu()
     End Sub
 
+    'Partida hasieratzen du
     Public Sub Hasieratu()
         Garbitu()
         'XML-a kargatu
@@ -52,6 +55,7 @@ Public Class Xakeak
         btnHasi.Enabled = False
         Dim piezaImg As String
         Dim pieza As XakePieza
+        'XML-ko piezak hasieratzen ditu, taulan irudikatuz
         For Each pos In Session("xmlErronkaNode").item("posizioa").SelectNodes("pieza")
             Select Case pos.innerText.Substring(0, 2)
                 Case "BA"
@@ -288,6 +292,7 @@ Public Class Xakeak
         Next
     End Sub
 
+    'Taulako piezak kentzen ditu
     Public Sub Garbitu()
         Ia1.ImageUrl = "~/resources/transparente.png"
         Ib1.ImageUrl = "~/resources/transparente.png"
@@ -355,6 +360,7 @@ Public Class Xakeak
         Ih7.ImageUrl = "~/resources/transparente.png"
     End Sub
 
+    'Aukeratutako gelaxka tratatzen du
     Protected Sub Ia1_Click(sender As Object, e As ImageClickEventArgs) Handles Ia1.Click
         Tratatu(1, 1, sender)
     End Sub
@@ -607,13 +613,16 @@ Public Class Xakeak
         Tratatu(8, 8, sender)
     End Sub
 
+    'Adierazitako ilara eta zutabeko gelaxka tratatzen du
     Public Sub Tratatu(i As Integer, z As Integer, sender As Object)
         Dim aukeratutakoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(i, z)
+        'Partida bukatu egin bada, beste bat hasi edo menura itzuli
         If (Session("partida").Egoera = PartidarenEgoera.TxuriakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Txuria") Or (Session("partida").Egoera = PartidarenEgoera.BeltzakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Beltza") Then
             txtXake.Text = "Irabazi duzu!"
             btnHasi.Enabled = True
             btnPista.Enabled = False
         End If
+        'Aukeratutako gelaxkako mugimendu posibleak markatzen dira
         If (Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten And Session("xmlErronkaNode").item("kolorea").innerText = "Txuria") Or (Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten And Session("xmlErronkaNode").item("kolorea").innerText = "Beltza") Then
             If Session("partida").GetSquaresThatCanBeSelected().Contains(aukeratutakoGelaxka) Then
                 Session("partida").SelectPiece(aukeratutakoGelaxka)
@@ -622,11 +631,13 @@ Public Class Xakeak
                 Marraztu()
             End If
         Else
+            'Partida bukatu egin bada, beste bat hasi edo menura itzuli
             If (Session("partida").Egoera = PartidarenEgoera.TxuriakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Txuria") Or (Session("partida").Egoera = PartidarenEgoera.BeltzakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Beltza") Then
                 txtXake.Text = "Irabazi duzu!"
                 btnHasi.Enabled = True
                 btnPista.Enabled = False
             Else
+                'Bestela, pieza mugitu
                 Dim gelaxkaZaharra As Gelaxka
                 gelaxkaZaharra = Session("partida").SelectedSquare
                 If Session("MarraztutakoGelaxkak").Contains(aukeratutakoGelaxka) Then
@@ -635,6 +646,7 @@ Public Class Xakeak
                     If (Session("partida").SelectedSquare.Pieza.GetType().Name = "Peoia" And (aukeratutakoGelaxka.Ilara = 1 Or aukeratutakoGelaxka.Ilara = 8)) Then
                         Session("partida").SelectedSquare.Pieza = New Erregina(Session("partida").SelectedSquare.Pieza.Kolorea)
                     End If
+                    'Enrokea egin den kalkulatu
                     Dim Enroke As Boolean
                     Enroke = Session("partida").MoveToSquare(aukeratutakoGelaxka)
                     If Enroke Then
@@ -642,8 +654,10 @@ Public Class Xakeak
                     End If
                     PiezaMugitu(sender, aukeratutakoGelaxka, gelaxkaZaharra)
                     txtXake.Text = ""
+                    'Xakea den kalkulatu
                     If Session("partida").Taula.XakeaDa(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                         txtXake.Text = "Xake"
+                        'Xake mate den kalkulatu
                         If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                             If Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea = Koloreak.Txuria Then
                                 Session("partida").Egoera = PartidarenEgoera.TxuriakWin
@@ -658,19 +672,25 @@ Public Class Xakeak
                             End If
                         End If
                     Else
+                        'Berdinketa egon den kalkulatu
                         If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                             Session("partida").Egoera = PartidarenEgoera.Berdinketa
                             txtXake.Text = "Erregea itota dago"
                         End If
                     End If
+                    'Mugimendu kopurua eguneratzen du
                     Dim mugZenb As String = (Session("xmlMugKopTotala") - Session("xmlMugKopOrain") + 1)
+                    'Egin beharreko mugimendua lortzen du
                     Dim mugimendua As XmlElement = Session("xmlErronkak").DocumentElement.SelectSingleNode("/erronkak/erronka[@id='" + Session("erronka") + "']/mugimenduak/mugimendua[@zenb='" + mugZenb.ToString + "']").item("move")
+                    'Mugimendu automatikoa lortzen du
                     Dim mugimenduaAuto As XmlElement = Session("xmlErronkak").DocumentElement.SelectSingleNode("/erronkak/erronka[@id='" + Session("erronka") + "']/mugimenduak/mugimendua[@zenb='" + mugZenb.ToString + "']").item("moveAutom")
+                    'Mugimendua ondo egin bada
                     If TratatuFrom(mugimendua.InnerText).Substring(0, 1) = gelaxkaZaharra.Ilara.ToString And TratatuFrom(mugimendua.InnerText).Substring(1, 1) = gelaxkaZaharra.Zutabea.ToString Then
                         If TratatuTo(mugimendua.InnerText).Substring(0, 1) = aukeratutakoGelaxka.Ilara.ToString And TratatuTo(mugimendua.InnerText).Substring(1, 1) = aukeratutakoGelaxka.Zutabea.ToString Then
                             Session("xmlMugKopOrain") = Session("xmlMugKopOrain") - 1
                             txtMugKop.Text = "Mugimendu kopurua: " + Session("xmlMugKopOrain").ToString
                             txtPista.Text = ""
+                            'Mugimendu automatikoa egin
                             Try
                                 Dim unekoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(CInt(TratatuFrom(mugimenduaAuto.InnerText).Substring(0, 1)), CInt(TratatuFrom(mugimenduaAuto.InnerText).Substring(1, 1)))
                                 Dim hurrengoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(CInt(TratatuTo(mugimenduaAuto.InnerText).Substring(0, 1)), CInt(TratatuTo(mugimenduaAuto.InnerText).Substring(1, 1)))
@@ -681,6 +701,7 @@ Public Class Xakeak
 
                             End Try
                         Else
+                            'Gaizki mugitu baldin bada
                             Panel3.Enabled = False
                             btnHasi.Enabled = True
                             btnPista.Enabled = False
@@ -688,6 +709,7 @@ Public Class Xakeak
                             txtPista.Text = ""
                         End If
                     Else
+                        'Gaizki mugitu baldin bada
                         Panel3.Enabled = False
                         btnHasi.Enabled = True
                         btnPista.Enabled = False
@@ -695,6 +717,7 @@ Public Class Xakeak
                         txtPista.Text = ""
                     End If
                 Else
+                    'Beste gelaxka bat aukeratzean, mugimendu posibleak ezabatu
                     EzabatuAukeratutakoGelaxka(gelaxkaZaharra)
                     MarrazkiaKendu()
                     Session("MarraztutakoGelaxkak").Clear()
@@ -703,12 +726,16 @@ Public Class Xakeak
             End If
         End If
     End Sub
+
+    'Pieza mugitzen du
     Public Sub PiezaMugituAuto(from As Gelaxka, toMove As Gelaxka)
         Dim irudia As String = String.Format("{0}_{1}", toMove.Pieza.GetType().Name, IIf([Enum].GetName(GetType(Koloreak), toMove.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
         irudia = "~/resources/" + irudia + ".png"
         PiezaJarri(toMove, irudia)
         PiezaEzabatu(from)
     End Sub
+
+    'Pieza irudikatzen du
     Public Sub PiezaJarri(laukia As Gelaxka, irudia As String)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             Ia1.ImageUrl = irudia
@@ -910,6 +937,8 @@ Public Class Xakeak
             ih8.ImageUrl = irudia
         End If
     End Sub
+
+    'XML-an adierazitako mugimenduak itzultzeko erabiltzen dugun metodoa. Letra bat emanda, dagokion zutabea itzultzen du
     Public Function ItzuliZut(zut As String) As Integer
         Select Case zut
             Case "a"
@@ -932,11 +961,13 @@ Public Class Xakeak
                 Return -1
         End Select
     End Function
+    'XML-ko mugimendua emanda hasierako gelaxka lortzen du, hau da, lehenengo bi karaktereak
     Public Function TratatuFrom(move As String) As String
         Dim from As String = move.Substring(0, 2)
         Dim zut = ItzuliZut(from.Substring(0, 1))
         Return from.Substring(1, 1) & zut
     End Function
+    'XML-ko mugimendua emanda helburu gelaxka lortzen du, hau da, azkeneko bi karaktereak
     Public Function TratatuTo(move As String) As String
         Dim toMove As String
         toMove = move.Substring(2, 2)
@@ -944,6 +975,7 @@ Public Class Xakeak
         Return toMove.Substring(1, 1) & zut
     End Function
 
+    'Aukeratutako gelaxka margotzen du
     Public Sub MarraztuAukeratutakoGelaxka(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             a1.BackImageUrl = "~/resources/AukeratuB.JPG"
@@ -1145,6 +1177,8 @@ Public Class Xakeak
             h8.BackImageUrl = "~/resources/AukeratuB.JPG"
         End If
     End Sub
+
+    'Aukeratutako gelaxka desmarkatzen du
     Public Sub EzabatuAukeratutakoGelaxka(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             a1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
@@ -1346,6 +1380,8 @@ Public Class Xakeak
             h8.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
         End If
     End Sub
+
+    'Adierazitako gelaxkako piezaren irudia kentzen du
     Public Sub PiezaEzabatu(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             Ia1.ImageUrl = "~/resources/transparente.png"
@@ -1548,6 +1584,7 @@ Public Class Xakeak
         End If
     End Sub
 
+    'Aukeratutako gelaxkako mugimendu posibleak markatzen ditu
     Public Sub Marraztu()
         For Each laukia As Gelaxka In Session("MarraztutakoGelaxkak")
             '1 ILARA
@@ -1753,6 +1790,7 @@ Public Class Xakeak
         Next
     End Sub
 
+    'Mugimendu posibleak kentzen ditu
     Public Sub MarrazkiaKendu()
         For Each laukia As Gelaxka In Session("MarraztutakoGelaxkak")
             '1 ILARA
@@ -1958,11 +1996,14 @@ Public Class Xakeak
         Next
     End Sub
 
+    'Pieza mugitzen du
     Public Sub PiezaMugitu(sender As Object, aukeratutakoGelaxka As Gelaxka, gelaxkaZaharra As Gelaxka)
         Dim irudia As String = String.Format("{0}_{1}", aukeratutakoGelaxka.Pieza.GetType().Name, IIf([Enum].GetName(GetType(Koloreak), aukeratutakoGelaxka.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
         sender.ImageUrl = "~/resources/" + irudia + ".png"
         PiezaEzabatu(gelaxkaZaharra)
     End Sub
+
+    'Enrokea egiten denean dorrea mugitzen du
     Public Sub DorreaMugitu(aukeratutakoGelaxka As Gelaxka)
         Dim taula = aukeratutakoGelaxka.Taula
         If aukeratutakoGelaxka.Ilara = 1 Then
@@ -2002,6 +2043,8 @@ Public Class Xakeak
             End If
         End If
     End Sub
+
+    'Enrokea egiten denean dorrea irudikatzen du
     Public Sub DorreaJarri(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
@@ -2037,6 +2080,7 @@ Public Class Xakeak
             If8.ImageUrl = "~/resources/" + irudia + ".png"
         End If
     End Sub
+    'Enrokea egiten denean dorrea kentzen du
     Public Sub DorreaKendu(Ilara As Integer, Zutabea As Integer)
         '1 ILARA
         If Ilara = 1 And Zutabea = 1 Then
@@ -2045,7 +2089,6 @@ Public Class Xakeak
         If Ilara = 1 And Zutabea = 8 Then
             Ih1.ImageUrl = "~/resources/transparente.png"
         End If
-
         '8 ILARA
         If Ilara = 8 And Zutabea = 1 Then
             Ia8.ImageUrl = "~/resources/transparente.png"
@@ -2055,11 +2098,13 @@ Public Class Xakeak
         End If
     End Sub
 
+    'Menura itzuli
     Protected Sub btnItzuli_Click(sender As Object, e As EventArgs) Handles btnItzuli.Click
         Response.Redirect("Erronkak.aspx", False)
         Context.ApplicationInstance.CompleteRequest()
     End Sub
 
+    'Uneko mugimenduaren pista lortzen du
     Protected Sub btnPista_Click(sender As Object, e As EventArgs) Handles btnPista.Click
         Dim mugZenb As String = (Session("xmlMugKopTotala") - Session("xmlMugKopOrain") + 1)
         Try

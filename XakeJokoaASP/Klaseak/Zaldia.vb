@@ -16,11 +16,13 @@
             New Mugimendua() With {.Aurrera = -1, .Eskubira = 2}
         }
 
+    'Zaldiak dituen mugimendu posibleak
     Public Overrides Function HelburuGelaxkak(BereGelaxka As Gelaxka) As List(Of Gelaxka)
         If BereGelaxka Is Nothing Then Return Nothing
         Return MugimenduPosibleak(mugimenduak, BereGelaxka)
     End Function
 
+    'Zaldiak erasotzen dituen gelaxka
     Public Overrides Function Erasotutakoak(BereGelaxka As Gelaxka) As List(Of Gelaxka)
         If BereGelaxka Is Nothing Then Return Nothing
         Return ErasoPosibleak(mugimenduak, BereGelaxka)

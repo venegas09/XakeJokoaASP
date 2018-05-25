@@ -2,6 +2,7 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'Orria lehendabiziz kargatzean, taula eta botoiak desaktibatuko dira partida hasi arte.
         If Not IsPostBack Then
             Panel3.Enabled = False
             btnErrenditu.Enabled = False
@@ -9,6 +10,7 @@
         End If
     End Sub
 
+    'Sakatutako gelaxkak tratatu:
     Protected Sub Ia1_Click(sender As Object, e As ImageClickEventArgs) Handles Ia1.Click
         Tratatu(1, 1, sender)
     End Sub
@@ -261,13 +263,16 @@
         Tratatu(8, 8, sender)
     End Sub
 
+    'Adierazitako ilara eta zutabeko gelaxka tratatzen du
     Public Sub Tratatu(i As Integer, z As Integer, sender As Object)
         Dim aukeratutakoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(i, z)
+        'Partida bukatu egin bada, beste bat hasi edo menura itzuli
         If Session("partida").Egoera = PartidarenEgoera.TxuriakWin Or Session("partida").Egoera = PartidarenEgoera.BeltzakWin Or Session("partida").Egoera = PartidarenEgoera.Berdinketa Then
             txtXake.Text = "Hasi partida berri bat"
             rdKol.Enabled = True
             btnHasi.Enabled = True
         End If
+        'Aukeratutako gelaxkako mugimendu posibleak markatzen dira
         If Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten Or Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten Then
             If Session("partida").GetSquaresThatCanBeSelected().Contains(aukeratutakoGelaxka) Then
                 Session("partida").SelectPiece(aukeratutakoGelaxka)
@@ -276,11 +281,13 @@
                 Marraztu()
             End If
         Else
+            'Partida bukatu egin bada, beste bat hasi edo menura itzuli
             If Session("partida").Egoera = PartidarenEgoera.TxuriakWin Or Session("partida").Egoera = PartidarenEgoera.BeltzakWin Or Session("partida").Egoera = PartidarenEgoera.Berdinketa Then
                 txtXake.Text = "Hasi partida berri bat"
                 rdKol.Enabled = True
                 btnHasi.Enabled = True
             Else
+                'Bestela, pieza mugitu
                 Dim gelaxkaZaharra As Gelaxka
                 gelaxkaZaharra = Session("partida").SelectedSquare
                 If Session("MarraztutakoGelaxkak").Contains(aukeratutakoGelaxka) Then
@@ -289,6 +296,7 @@
                     If (Session("partida").SelectedSquare.Pieza.GetType().Name = "Peoia" And (aukeratutakoGelaxka.Ilara = 1 Or aukeratutakoGelaxka.Ilara = 8)) Then
                         Session("partida").SelectedSquare.Pieza = New Erregina(Session("partida").SelectedSquare.Pieza.Kolorea)
                     End If
+                    'Enrokea egin den kalkulatu
                     Dim Enroke As Boolean
                     Enroke = Session("partida").MoveToSquare(aukeratutakoGelaxka)
                     If Enroke Then
@@ -296,8 +304,10 @@
                     End If
                     PiezaMugitu(sender, aukeratutakoGelaxka, gelaxkaZaharra)
                     txtXake.Text = ""
+                    'Xakea den kalkulatu
                     If Session("partida").Taula.XakeaDa(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                         txtXake.Text = "Xake"
+                        'Xake mate den kalkulatu
                         If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                             btnHasi.Enabled = True
                             rdKol.Enabled = True
@@ -314,12 +324,14 @@
                             End If
                         End If
                     Else
+                        'Berdinketa egon den kalkulatu
                         If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                             Session("partida").Egoera = PartidarenEgoera.Berdinketa
                             txtXake.Text = "Erregea itota dago"
                         End If
                     End If
                 Else
+                    'Beste gelaxka bat aukeratzean, mugimendu posibleak ezabatu
                     EzabatuAukeratutakoGelaxka(gelaxkaZaharra)
                     MarrazkiaKendu()
                     Session("MarraztutakoGelaxkak").Clear()
@@ -329,6 +341,7 @@
         End If
     End Sub
 
+    'Aukeratutako gelaxka margotzen du
     Public Sub MarraztuAukeratutakoGelaxka(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             a1.BackImageUrl = "~/resources/AukeratuB.JPG"
@@ -530,6 +543,8 @@
             h8.BackImageUrl = "~/resources/AukeratuB.JPG"
         End If
     End Sub
+
+    'Aukeratutako gelaxka desmarkatzen du
     Public Sub EzabatuAukeratutakoGelaxka(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             a1.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
@@ -731,6 +746,8 @@
             h8.BackImageUrl = "~/resources/gelaxkaBeltza.jpeg"
         End If
     End Sub
+
+    'Adierazitako gelaxkako piezaren irudia kentzen du
     Public Sub PiezaEzabatu(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             Ia1.ImageUrl = "~/resources/transparente.png"
@@ -933,6 +950,7 @@
         End If
     End Sub
 
+    'Aukeratutako gelaxkako mugimendu posibleak markatzen ditu
     Public Sub Marraztu()
         For Each laukia As Gelaxka In Session("MarraztutakoGelaxkak")
             '1 ILARA
@@ -1137,6 +1155,8 @@
             End If
         Next
     End Sub
+
+    'Mugimendu posibleak kentzen ditu
     Public Sub MarrazkiaKendu()
         For Each laukia As Gelaxka In Session("MarraztutakoGelaxkak")
             '1 ILARA
@@ -1342,11 +1362,14 @@
         Next
     End Sub
 
+    'Pieza mugitzen du
     Public Sub PiezaMugitu(sender As Object, aukeratutakoGelaxka As Gelaxka, gelaxkaZaharra As Gelaxka)
         Dim irudia As String = String.Format("{0}_{1}", aukeratutakoGelaxka.Pieza.GetType().Name, IIf([Enum].GetName(GetType(Koloreak), aukeratutakoGelaxka.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
         sender.ImageUrl = "~/resources/" + irudia + ".png"
         PiezaEzabatu(gelaxkaZaharra)
     End Sub
+
+    'Enrokea egiten denean dorrea mugitzen du
     Public Sub DorreaMugitu(aukeratutakoGelaxka As Gelaxka)
         Dim taula = aukeratutakoGelaxka.Taula
         If aukeratutakoGelaxka.Ilara = 1 Then
@@ -1386,6 +1409,7 @@
             End If
         End If
     End Sub
+    'Enrokea egitean dorrearen irudia jartzen du
     Public Sub DorreaJarri(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", IIf([Enum].GetName(GetType(Koloreak), laukia.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
@@ -1421,6 +1445,7 @@
             If8.ImageUrl = "~/resources/" + irudia + ".png"
         End If
     End Sub
+    'Enrokea egitean dorrearen irudia kentzen du
     Public Sub DorreaKendu(Ilara As Integer, Zutabea As Integer)
         '1 ILARA
         If Ilara = 1 And Zutabea = 1 Then
@@ -1439,6 +1464,7 @@
         End If
     End Sub
 
+    'Partida hasi egiten du
     Protected Sub btnHasi_Click(sender As Object, e As EventArgs) Handles btnHasi.Click
         rdKol.Enabled = False
         Panel3.Enabled = True
@@ -1465,6 +1491,7 @@
         btnErrenditu.Enabled = True
     End Sub
 
+    'Errenditzeko
     Protected Sub btnErrenditu_Click(sender As Object, e As EventArgs) Handles btnErrenditu.Click
         btnHasi.Enabled = True
         rdKol.Enabled = True
@@ -1480,6 +1507,7 @@
         btnErrenditu.Enabled = False
     End Sub
 
+    'Tablas egiteko
     Protected Sub btnTablas_Click(sender As Object, e As EventArgs) Handles btnTablas.Click
         Session("partida").Egoera = PartidarenEgoera.Berdinketa
         btnHasi.Enabled = True
@@ -1489,6 +1517,7 @@
         btnErrenditu.Enabled = False
     End Sub
 
+    'Taulako laukiak hasieratzen ditu
     Public Sub LaukiakGarbitu()
         For Each laukia As Gelaxka In Session("partida").Taula
             '1 ILARA
@@ -1693,6 +1722,7 @@
             End If
         Next
     End Sub
+    'Taulako piezak hasieratzen ditu
     Public Sub Hasieratu(Kolorea As Koloreak)
         Ia3.ImageUrl = "~/resources/transparente.png"
         Ib3.ImageUrl = "~/resources/transparente.png"
@@ -1795,6 +1825,7 @@
         End If
     End Sub
 
+    'Menura itzultzeko
     Protected Sub btnItzuli_Click(sender As Object, e As EventArgs) Handles btnItzuli.Click
         Response.Redirect("Hasiera.aspx", False)
         Context.ApplicationInstance.CompleteRequest()

@@ -1,5 +1,6 @@
 ﻿Public MustInherit Class XakePieza
 
+    'Eraikitzailea
     Public Sub New(PiezaKolorea As Koloreak)
         Kolorea = PiezaKolorea
         Mugituta = False
@@ -16,8 +17,10 @@
         End Set
     End Property
 
+    'Gelaxka bat emanda bere helburukoak lortuko ditu
     Public MustOverride Function HelburuGelaxkak(BereGelaxka As Gelaxka) As List(Of Gelaxka)
     Public MustOverride Function Erasotutakoak(BereGelaxka As Gelaxka) As List(Of Gelaxka)
+    'Adierazitako gelaxka libre dagoen adierazten du
     Public Function gelaxkaLibreDago(helburuGelaxka As Gelaxka) As Boolean
         If helburuGelaxka Is Nothing Then Return False
         If helburuGelaxka.Pieza Is Nothing OrElse helburuGelaxka.Pieza.Kolorea <> Kolorea Then
@@ -27,6 +30,7 @@
         End If
     End Function
 
+    'Adierazitako gelaxka erasotzean libre dagoen adierazten du
     Public Function gelaxkaLibreDagoErasotzean(helburuGelaxka As Gelaxka) As Boolean
         If helburuGelaxka Is Nothing Then
             Return False
@@ -35,6 +39,7 @@
         End If
     End Function
 
+    'Gelaxkako mugimendu posibleak lortzen ditu
     Protected Function MugimenduPosibleak(mugimenduak As IEnumerable(Of Mugimendua), BereGelaxka As Gelaxka) As List(Of Gelaxka)
         Dim taula As XakeTaula = BereGelaxka.Taula
         Dim gelaxkaPosibleak As New List(Of Gelaxka)
@@ -64,6 +69,7 @@
         Return gelaxkaPosibleak
     End Function
 
+    'Adierazitako gelaxka eta norabideekin mugimendu posibleak itzultzen ditu
     Protected Function MugimenduPosibleakNorabidekin(BereGelaxka As Gelaxka, aurreraJarraitu As Integer, eskubiraJarraitu As Integer) As IEnumerable(Of Gelaxka)
 
         Dim taula As XakeTaula = BereGelaxka.Taula
@@ -101,6 +107,8 @@
         Loop
         Return gelaxkaPosibleak
     End Function
+
+    'Adierazitako gelaxka eta norabideekin erasotutako gelaxkak itzultzen ditu
     Protected Function ErasotutakoakNorabidekin(BereGelaxka As Gelaxka, aurreraJarraitu As Integer, eskubiraJarraitu As Integer) As IEnumerable(Of Gelaxka)
 
         Dim taula As XakeTaula = BereGelaxka.Taula
@@ -121,6 +129,7 @@
         Return gelaxkaPosibleak
     End Function
 
+    'Adierazitako gelaxkak erasotzen dituen gelaxkak lortzen ditu
     Protected Function ErasoPosibleak(mugimenduak As IEnumerable(Of Mugimendua), BereGelaxka As Gelaxka) As List(Of Gelaxka)
         Dim taula As XakeTaula = BereGelaxka.Taula
         Dim gelaxkaPosibleak As New List(Of Gelaxka)

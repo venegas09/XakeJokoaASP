@@ -3,6 +3,7 @@
 Public Class IkusiIrekiera
     Inherits System.Web.UI.Page
 
+    'Orria lehendabiziz kargatzean, dagokion irekiera lortuko da
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Dim docXml As New XmlDocument
@@ -17,6 +18,7 @@ Public Class IkusiIrekiera
         End If
     End Sub
 
+    'Aurreko mugimendura bueltatuko da
     Protected Sub btnAtzera_Click(sender As Object, e As EventArgs) Handles btnAtzera.Click
         If Session("mugimendua") <= 1 Then
             If Session("azkenBotoia") = True Then
@@ -44,6 +46,7 @@ Public Class IkusiIrekiera
         End If
     End Sub
 
+    'Hurrengo mugimendura joango da
     Protected Sub btnHurrengoa_Click(sender As Object, e As EventArgs) Handles btnHurrengoa.Click
         If Session("irekieraJokua") Is Nothing Then
             Dim Partida As New XakePartida()
@@ -71,13 +74,16 @@ Public Class IkusiIrekiera
                 txtProba.Text = ""
                 PiezaMugituAurrera(Session("irekierak")(Request.QueryString("kodea")).FirstChild.ChildNodes(Session("mugimendua")).ChildNodes(0).InnerText)
             End If
-            End If
+        End If
     End Sub
+
+    'XML-ko mugimendua emanda hasierako gelaxka lortzen du, hau da, lehenengo bi karaktereak
     Public Function TratatuFrom(move As String) As String
         Dim from As String = move.Substring(0, 2)
         Dim zut = ItzuliZut(from.Substring(0, 1))
         Return from.Substring(1, 1) & zut
     End Function
+    'XML-ko mugimendua emanda helburu gelaxka lortzen du, hau da, azkeneko bi karaktereak
     Public Function TratatuTo(move As String) As String
         Dim toMove As String
         If move.Contains("x") Then
@@ -88,6 +94,8 @@ Public Class IkusiIrekiera
         Dim zut = ItzuliZut(toMove.Substring(0, 1))
         Return toMove.Substring(1, 1) & zut
     End Function
+
+    'Hurrengo mugimendura joaten da
     Public Sub PiezaMugituAurrera(move As String)
         If Session("pila") Is Nothing Then
             Dim Pila As New Stack
@@ -97,9 +105,11 @@ Public Class IkusiIrekiera
         Dim Nora = TratatuTo(move)
         Dim gelaxkaFrom As Gelaxka = Session("irekieraJokua").Taula.gelaxkaLortu(CInt(Nondik.Substring(0, 1)), CInt(Nondik.Substring(1, 1)))
         Dim gelaxkaTo As Gelaxka = Session("irekieraJokua").Taula.gelaxkaLortu(CInt(Nora.Substring(0, 1)), CInt(Nora.Substring(1, 1)))
+        'Pieza bat jan baldin bada pilan gorde
         If move.Contains("x") Then
             Session("pila").Push(gelaxkaTo.Pieza)
         End If
+        'Enrokea dagoen konprobatu
         Dim Enroke As Boolean
         Enroke = Session("irekieraJokua").Taula.Move(gelaxkaFrom, gelaxkaTo)
         If Enroke Then
@@ -107,6 +117,8 @@ Public Class IkusiIrekiera
         End If
         PiezaMugitu(gelaxkaFrom, gelaxkaTo)
     End Sub
+
+    'Aurreko mugimendura joan
     Public Sub PiezaMugituAtzera(move As String)
         Dim Nondik = TratatuFrom(move)
         Dim Nora = TratatuTo(move)
@@ -114,14 +126,18 @@ Public Class IkusiIrekiera
         Dim gelaxkaTo As Gelaxka = Session("irekieraJokua").Taula.gelaxkaLortu(CInt(Nora.Substring(0, 1)), CInt(Nora.Substring(1, 1)))
         Dim Enroke As Boolean
         Enroke = Session("irekieraJokua").Taula.Move(gelaxkaTo, gelaxkaFrom)
+        'Pieza bat jan baldin bada pilatik atera
         If move.Contains("x") Then
             gelaxkaTo.Pieza = Session("pila").Pop()
         End If
+        'Enrokea egin den konprobatu
         If Enroke Then
             DorreaMugituAtzera(gelaxkaTo)
         End If
         PiezaMugitu(gelaxkaTo, gelaxkaFrom)
     End Sub
+
+    'XML-an adierazitako mugimenduak itzultzeko erabiltzen dugun metodoa. Letra bat emanda, dagokion zutabea itzultzen du
     Public Function ItzuliZut(zut As String) As Integer
         Select Case zut
             Case "a"
@@ -144,6 +160,8 @@ Public Class IkusiIrekiera
                 Return -1
         End Select
     End Function
+
+    'Enrokea egiten denean dorrea mugitzen du
     Public Sub DorreaMugitu(aukeratutakoGelaxka As Gelaxka)
         Dim taula = aukeratutakoGelaxka.Taula
         If aukeratutakoGelaxka.Ilara = 1 Then
@@ -187,6 +205,8 @@ Public Class IkusiIrekiera
             End If
         End If
     End Sub
+
+    'Enrokea egin bada dorrea atzera mugitzen du
     Public Sub DorreaMugituAtzera(aukeratutakoGelaxka As Gelaxka)
         Dim taula = aukeratutakoGelaxka.Taula
         If aukeratutakoGelaxka.Ilara = 1 Then
@@ -210,6 +230,8 @@ Public Class IkusiIrekiera
             End If
         End If
     End Sub
+
+    'Enrokea egiten denean dorrea irudikatzen du
     Public Sub DorreaJarri(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
             Dim irudia As String = String.Format("{0}_{1}", "Dorrea", "T")
@@ -261,6 +283,7 @@ Public Class IkusiIrekiera
             ih8.ImageUrl = "~/resources/" + irudia + ".png"
         End If
     End Sub
+    'Enrokea egiten denean dorrea kentzen du
     Public Sub DorreaKendu(Ilara As Integer, Zutabea As Integer)
         '1 ILARA
         If Ilara = 1 And Zutabea = 1 Then
@@ -289,6 +312,8 @@ Public Class IkusiIrekiera
             Id8.ImageUrl = "~/resources/transparente.png"
         End If
     End Sub
+
+    'Pieza mugitzen du
     Public Sub PiezaMugitu(from As Gelaxka, toMove As Gelaxka)
         Dim irudia As String = String.Format("{0}_{1}", toMove.Pieza.GetType().Name, IIf([Enum].GetName(GetType(Koloreak), toMove.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
         irudia = "~/resources/" + irudia + ".png"
@@ -301,6 +326,8 @@ Public Class IkusiIrekiera
             PiezaJarri(from, irudia2)
         End If
     End Sub
+
+    'Pieza irudikatzen du
     Public Sub PiezaJarri(laukia As Gelaxka, irudia As String)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             Ia1.ImageUrl = irudia
@@ -502,6 +529,8 @@ Public Class IkusiIrekiera
             ih8.ImageUrl = irudia
         End If
     End Sub
+
+    'Adierazitako gelaxkako piezaren irudia kentzen du
     Public Sub PiezaEzabatu(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
             Ia1.ImageUrl = "~/resources/transparente.png"
@@ -703,6 +732,8 @@ Public Class IkusiIrekiera
             ih8.ImageUrl = "~/resources/transparente.png"
         End If
     End Sub
+
+    'Taulako piezak hasieratzen ditu
     Public Sub Hasieratu()
         Ia1.ImageUrl = "~/resources/Dorrea_T.png"
         Ib1.ImageUrl = "~/resources/Zaldia_T.png"
@@ -738,6 +769,7 @@ Public Class IkusiIrekiera
         Ih7.ImageUrl = "~/resources/Peoia_B.png"
     End Sub
 
+    'Aurreko menura itzuli
     Protected Sub btnItzuli_Click(sender As Object, e As EventArgs) Handles btnItzuli.Click
         Session.Abandon()
         Response.Redirect("Irekierak.aspx", False)

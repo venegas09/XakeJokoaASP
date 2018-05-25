@@ -3,6 +3,7 @@
 Public Class Irekierak
     Inherits System.Web.UI.Page
 
+    'Orria kargatzean lista hedagarri batean XML-ko irekiera guztiak agertuko dira
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim docXml As New XmlDocument
         docXml.Load(Server.MapPath("Hasierak.xml"))

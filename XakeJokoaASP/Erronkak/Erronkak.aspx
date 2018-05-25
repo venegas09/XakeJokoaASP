@@ -101,21 +101,21 @@
                                 <td class="auto-style32">
                                     <asp:ImageButton ID="btnXake1" runat="server" ImageUrl="~/resources/xake1.jpg" />
                                 </td>
-                                <td class="auto-style33">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 2 MUGIMENDU -<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Xake mate egin 2 mugimendutan.</td>
+                                <td class="auto-style33">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 2 MUGIMENDU -<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xake mate egin 2 mugimendutan.</td>
                             </tr>
                             <tr>
                                 <td class="auto-style19">&nbsp;</td>
                                 <td class="auto-style26">
                                     <asp:ImageButton ID="btnXake2" runat="server" ImageUrl="~/resources/xake2.PNG" />
                                 </td>
-                                <td class="auto-style23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 2 MUGIMENDU -<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Xake mate egin 2 mugimendutan.</td>
+                                <td class="auto-style23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 2 MUGIMENDU -<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xake mate egin 2 mugimendutan.</td>
                             </tr>
                             <tr>
                                 <td class="auto-style19">&nbsp;</td>
                                 <td class="auto-style26">
                                     <asp:ImageButton ID="btnXake3" runat="server" ImageUrl="~/resources/xake3.PNG" />
                                 </td>
-                                <td class="auto-style23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 3 MUGIMENDU -<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Xake mate egin 3 mugimendutan</td>
+                                <td class="auto-style23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 3 MUGIMENDU -<br />&nbsp;&nbsp;&nbsp;&nbsp;Xake mate egin 3 mugimendutan</td>
                             </tr>
                         </table>
                     </td>
@@ -133,7 +133,7 @@
                                 <td class="auto-style37">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 4 MUGIMENDU -<br />&nbsp; Xake mate egin 4 mugimendutan</td>
                             </tr>
                             <tr>
-                                <td class="auto-style40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <td class="auto-style40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                                     <asp:ImageButton ID="btnXake6" runat="server" ImageUrl="~/resources/xake6.PNG" />
                                 </td>
                                 <td class="auto-style41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 4 MUGIMENDU -<br />&nbsp; Xake mate egin 4 mugimendutan</td>
@@ -142,6 +142,12 @@
                     </td>
                 </tr>
             </table>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             </br>
             </br>
             </br>
