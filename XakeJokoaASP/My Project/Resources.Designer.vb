@@ -263,16 +263,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property reto1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("reto1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property transparente() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("transparente", resourceCulture)
@@ -306,6 +296,36 @@ Namespace My.Resources
         Friend ReadOnly Property xake3() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("xake3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property xake4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xake4", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property xake5() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xake5", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property xake6() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("xake6", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

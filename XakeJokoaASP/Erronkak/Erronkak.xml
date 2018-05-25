@@ -15,7 +15,7 @@
         <mugimenduak>
             <mugimendua zenb="1">
                 <move>f8d6</move>
-                <moveAutom>g7g8</moveAutom>
+                <moveAutom>g8g7</moveAutom>
                 <pista>Alfil bat mugitu behar duzu.</pista>
 			       </mugimendua>
             <mugimendua zenb="2">
@@ -26,29 +26,130 @@
     </erronka>
     <erronka id="2">
         <kolorea>Txuria</kolorea>
+        <desk>Mate eman behar duzu 2 mugimendutan.</desk>
+        <posizioa>
+            <pieza>TDa1</pieza>
+            <pieza>TPa2</pieza>
+            <pieza>TPb2</pieza>
+            <pieza>TPc2</pieza>
+            <pieza>TAc4</pieza>
+            <pieza>TPd3</pieza>
+            <pieza>TZd5</pieza>
+            <pieza>TEe1</pieza>
+            <pieza>TPe4</pieza>
+            <pieza>TPf2</pieza>
+            <pieza>TPg2</pieza>
+            <pieza>TPh2</pieza>
+            <pieza>TDh1</pieza>
+            <pieza>TZg6</pieza>
+            <pieza>TQh6</pieza>
+            <pieza>BDa8</pieza>
+            <pieza>BPa7</pieza>
+            <pieza>BPb7</pieza>
+            <pieza>BAc8</pieza>
+            <pieza>BPc7</pieza>
+            <pieza>BZc6</pieza>
+            <pieza>BAc5</pieza>
+            <pieza>BQd8</pieza>
+            <pieza>BPd6</pieza>
+            <pieza>BPe5</pieza>
+            <pieza>BDf7</pieza>
+            <pieza>BPf6</pieza>
+            <pieza>BPf5</pieza>
+            <pieza>BEg8</pieza>
+            <pieza>BPh7</pieza>
+        </posizioa>
+        <mugKop>2</mugKop>
+        <mugimenduak>
+            <mugimendua zenb="1">
+                <move>d5f6</move>
+                <moveAutom>d8f6</moveAutom>
+                <pista>Zaldi bat mugitu behar duzu.</pista>
+			       </mugimendua>
+            <mugimendua zenb="2">
+                <move>h6f8</move>
+                <pista>Erregina mugitu behar duzu.</pista>
+			       </mugimendua>
+        </mugimenduak>
+    </erronka>
+    <erronka id="3">
+        <kolorea>Txuria</kolorea>
         <desk>Mate eman behar duzu 3 mugimendutan.</desk>
         <posizioa>
-            <pieza>TDc8</pieza>
-            <pieza>TEd7</pieza>
-            <pieza>TPd4</pieza>
-            <pieza>TQb1</pieza>
-            <pieza>BPa5</pieza>
-            <pieza>BPg2</pieza>
-			      <pieza>BEg7</pieza>
+            <pieza>TDe1</pieza>
+            <pieza>TPf4</pieza>
+            <pieza>TDg1</pieza>
+            <pieza>TZg3</pieza>
+            <pieza>TEg8</pieza>
+            <pieza>BDd7</pieza>
+			      <pieza>BPf5</pieza>
+            <pieza>BEf6</pieza>
+			      <pieza>BZg6</pieza>
+            <pieza>BDh7</pieza>
         </posizioa>
         <mugKop>3</mugKop>
         <mugimenduak>
             <mugimendua zenb="1">
-                <move>g2g1</move>
-                <pista>Dorrea mugitu behar duzu.</pista>
-			      </mugimendua>
-			      <mugimendua zenb="2">
-                <move>g7h8</move>
-                <pista>Erragina mugitu behar duzu.</pista>
-			      </mugimendua>
+                <move>g3h5</move>
+                <moveAutom>h7h5</moveAutom>
+                <pista>Zaldia mugitu behar duzu.</pista>
+			       </mugimendua>
+            <mugimendua zenb="2">
+                <move>g1g6</move>
+                <moveAutom>f6g6</moveAutom>
+                <pista>Dorre bat mugitu behar duzu.</pista>
+			       </mugimendua>
+            <mugimendua zenb="3">
+                <move>e1e6</move>
+                <pista>Dorre bat mugitu behar duzu.</pista>
+			       </mugimendua>
         </mugimenduak>
     </erronka>
-    <erronka id="3">
+  <erronka id="4">
+        <kolorea>Txuria</kolorea>
+        <desk>Mate eman behar duzu 3 mugimendutan.</desk>
+        <posizioa>
+            <pieza>TAa4</pieza>
+            <pieza>TZb5</pieza>
+            <pieza>TEd1</pieza>
+            <pieza>TZe4</pieza>
+            <pieza>TAg3</pieza>
+            <pieza>TPg4</pieza>
+            <pieza>TDg7</pieza>
+            <pieza>TQh1</pieza>
+            <pieza>BAa3</pieza>
+			      <pieza>BPa6</pieza>
+            <pieza>BPb4</pieza>
+			      <pieza>BQb6</pieza>
+            <pieza>BPc4</pieza>
+            <pieza>BPc7</pieza>
+			      <pieza>BPd4</pieza>
+            <pieza>BPd6</pieza>
+            <pieza>BEe6</pieza>
+			      <pieza>BZe7</pieza>
+            <pieza>BDe8</pieza>
+            <pieza>BPf6</pieza>
+			      <pieza>BDf8</pieza>    
+        </posizioa>
+        <mugKop>3</mugKop>
+        <mugimenduak>
+            <mugimendua zenb="1">
+                <move>e4c5</move>
+                <moveAutom>b6c5</moveAutom>
+                <pista>Zaldi bat mugitu behar duzu.</pista>
+			       </mugimendua>
+            <mugimendua zenb="2">
+                <move>b5c7</move>
+                <moveAutom>c5c7</moveAutom>
+                <pista>Zaldi bat mugitu behar duzu.</pista>
+			       </mugimendua>
+            <mugimendua zenb="3">
+                <move>h1e4</move>
+                <pista>Erregina mugitu behar duzu.</pista>
+			       </mugimendua>
+        </mugimenduak>
+    </erronka>
+    <erronka id="5">
         <kolorea>Txuria</kolorea>
         <desk>Mate eman behar duzu 4 mugimendutan.</desk>
         <posizioa>
@@ -61,16 +162,71 @@
         <mugKop>4</mugKop>
         <mugimenduak>
             <mugimendua zenb="1">
-                <move>c8d8</move>
+                <move>e4c5</move>
+                <moveAutom>c8d8</moveAutom>
                 <pista>Zaldi bat mugitu behar duzu.</pista>
 			      </mugimendua>
 			      <mugimendua zenb="2">
-                <move>d8c8</move>
+                <move>e6f7</move>
+                <moveAutom>d8c8</moveAutom>
                 <pista>Erregea mugitu behar duzu.</pista>
 			      </mugimendua>
 			      <mugimendua zenb="3">
-                <move>c8d8</move>
+                <move>d5b6</move>
+                <moveAutom>c8d8</moveAutom>
                 <pista>Zaldi bat mugitu behar duzu.</pista>
+			      </mugimendua>
+            <mugimendua zenb="4">
+                <move>c5e6</move>
+                <pista>Zaldi bat mugitu behar duzu.</pista>
+			      </mugimendua>
+        </mugimenduak>
+    </erronka>
+    <erronka id="6">
+        <kolorea>Txuria</kolorea>
+        <desk>Mate eman behar duzu 4 mugimendutan.</desk>
+        <posizioa>
+            <pieza>TPa2</pieza>
+            <pieza>TAd4</pieza>
+            <pieza>TQd5</pieza>
+            <pieza>TDe8</pieza>
+            <pieza>TPf2</pieza>
+            <pieza>TPf7</pieza>
+            <pieza>TEg1</pieza>
+            <pieza>TAg2</pieza>
+            <pieza>TPg3</pieza>
+            <pieza>TPh2</pieza>
+            <pieza>BAa6</pieza>
+            <pieza>BPa7</pieza>
+            <pieza>BPb6</pieza>
+            <pieza>BQd2</pieza>
+            <pieza>BZd3</pieza>
+            <pieza>BDf8</pieza>
+            <pieza>BPg6</pieza>
+            <pieza>BAg7</pieza>
+            <pieza>BPh6</pieza>
+            <pieza>BEh8</pieza>
+        </posizioa>
+        <mugKop>4</mugKop>
+        <mugimenduak>
+            <mugimendua zenb="1">
+                <move>e8f8</move>
+                <moveAutom>h8h7</moveAutom>
+                <pista>Dorre bat mugitu behar duzu.</pista>
+			      </mugimendua>
+			      <mugimendua zenb="2">
+                <move>f8h8</move>
+                <moveAutom>h7h8</moveAutom>
+                <pista>Dorre bat mugitu behar duzu.</pista>
+			      </mugimendua>
+			      <mugimendua zenb="3">
+                <move>f7f8</move>
+                <moveAutom>h8h7</moveAutom>
+                <pista>Peoi bat mugitu behar duzu.</pista>
+			      </mugimendua>
+            <mugimendua zenb="4">
+                <move>f8g8</move>
+                <pista>Erregin bat mugitu behar duzu.</pista>
 			      </mugimendua>
         </mugimenduak>
     </erronka>

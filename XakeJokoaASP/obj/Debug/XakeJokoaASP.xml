@@ -153,11 +153,6 @@ XakeJokoaASP
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:XakeJokoaASP.My.Resources.Resources.reto1">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:XakeJokoaASP.My.Resources.Resources.transparente">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -174,6 +169,21 @@ XakeJokoaASP
 </summary>
 </member>
 <member name="P:XakeJokoaASP.My.Resources.Resources.xake3">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.xake4">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.xake5">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:XakeJokoaASP.My.Resources.Resources.xake6">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -225,33 +235,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:XakeJokoaASP.Erronkak._btnReto1">
-<summary>
-Control btnReto1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:XakeJokoaASP.Erronkak._btnReto2">
-<summary>
-Control btnReto2.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:XakeJokoaASP.Erronkak._btnReto3">
-<summary>
-Control btnReto3.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:XakeJokoaASP.Erronkak._btnXake1">
 <summary>
 Control btnXake1.
@@ -273,6 +256,33 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:XakeJokoaASP.Erronkak._btnXake3">
 <summary>
 Control btnXake3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Erronkak._btnXake4">
+<summary>
+Control btnXake4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Erronkak._btnXake5">
+<summary>
+Control btnXake5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:XakeJokoaASP.Erronkak._btnXake6">
+<summary>
+Control btnXake6.
 </summary>
 <remarks>
 Campo generado automáticamente.

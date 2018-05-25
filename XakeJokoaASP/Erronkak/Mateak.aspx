@@ -55,6 +55,7 @@
                         <asp:Panel ID="Panel3" runat="server" CssClass="auto-style4" Height="640px" Width="640px">
                             <br>
                             <br>
+                            <br>
                             <br></br>
                             <table cellpadding="0" cellspacing="0" class="auto-style1">
                                 <tr>
@@ -394,15 +395,8 @@
                                     </td>
                                 </tr>
                             </table>
-                            <br>
-                            <br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
                             </br>
-                            </br>
-                            </br>
-                            </br>
+                            
                             
                             </asp:Panel>
                     </asp:Panel>

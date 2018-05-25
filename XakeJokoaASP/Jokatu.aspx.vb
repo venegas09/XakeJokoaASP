@@ -265,6 +265,7 @@
         Dim aukeratutakoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(i, z)
         If Session("partida").Egoera = PartidarenEgoera.TxuriakWin Or Session("partida").Egoera = PartidarenEgoera.BeltzakWin Or Session("partida").Egoera = PartidarenEgoera.Berdinketa Then
             txtXake.Text = "Hasi partida berri bat"
+            rdKol.Enabled = True
             btnHasi.Enabled = True
         End If
         If Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten Or Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten Then
@@ -277,6 +278,7 @@
         Else
             If Session("partida").Egoera = PartidarenEgoera.TxuriakWin Or Session("partida").Egoera = PartidarenEgoera.BeltzakWin Or Session("partida").Egoera = PartidarenEgoera.Berdinketa Then
                 txtXake.Text = "Hasi partida berri bat"
+                rdKol.Enabled = True
                 btnHasi.Enabled = True
             Else
                 Dim gelaxkaZaharra As Gelaxka
@@ -298,6 +300,7 @@
                         txtXake.Text = "Xake"
                         If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                             btnHasi.Enabled = True
+                            rdKol.Enabled = True
                             If Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea = Koloreak.Txuria Then
                                 Session("partida").Egoera = PartidarenEgoera.TxuriakWin
                                 txtXake.Text = "Txuriak Irabazi du"
@@ -1437,6 +1440,7 @@
     End Sub
 
     Protected Sub btnHasi_Click(sender As Object, e As EventArgs) Handles btnHasi.Click
+        rdKol.Enabled = False
         Panel3.Enabled = True
         Dim Partida As New XakePartida()
         Session("partida") = Partida
@@ -1444,7 +1448,6 @@
         Session("MarraztutakoGelaxkak") = MarraztutakoGelaxkak
         Dim AukeratutakoBox As New Object()
         Session("AukeratutakoBox") = AukeratutakoBox
-        Garbitu()
         LaukiakGarbitu()
         If rdKol.SelectedValue = "Txuriak" Then
             Session("partida").Start(Koloreak.Txuria)
@@ -1464,6 +1467,7 @@
 
     Protected Sub btnErrenditu_Click(sender As Object, e As EventArgs) Handles btnErrenditu.Click
         btnHasi.Enabled = True
+        rdKol.Enabled = True
         If Session("partida").Egoera = PartidarenEgoera.BeltzakMugitzen Or Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten Then
             txtXake.Text = "Txuriek irabazi dute"
             Session("partida").Egoera = PartidarenEgoera.TxuriakWin
@@ -1479,76 +1483,12 @@
     Protected Sub btnTablas_Click(sender As Object, e As EventArgs) Handles btnTablas.Click
         Session("partida").Egoera = PartidarenEgoera.Berdinketa
         btnHasi.Enabled = True
+        rdKol.Enabled = True
         txtXake.Text = "Tablas adostu da"
         btnTablas.Enabled = False
         btnErrenditu.Enabled = False
     End Sub
-    Public Sub Garbitu()
-        Ia1.ImageUrl = "~/resources/transparente.png"
-        Ib1.ImageUrl = "~/resources/transparente.png"
-        Ic1.ImageUrl = "~/resources/transparente.png"
-        Id1.ImageUrl = "~/resources/transparente.png"
-        Ie1.ImageUrl = "~/resources/transparente.png"
-        Ih1.ImageUrl = "~/resources/transparente.png"
-        Ig1.ImageUrl = "~/resources/transparente.png"
-        If1.ImageUrl = "~/resources/transparente.png"
-        Ia2.ImageUrl = "~/resources/transparente.png"
-        Ib2.ImageUrl = "~/resources/transparente.png"
-        Ic2.ImageUrl = "~/resources/transparente.png"
-        Id2.ImageUrl = "~/resources/transparente.png"
-        Ie2.ImageUrl = "~/resources/transparente.png"
-        If2.ImageUrl = "~/resources/transparente.png"
-        Ig2.ImageUrl = "~/resources/transparente.png"
-        Ih2.ImageUrl = "~/resources/transparente.png"
-        Ia3.ImageUrl = "~/resources/transparente.png"
-        Ib3.ImageUrl = "~/resources/transparente.png"
-        Ic3.ImageUrl = "~/resources/transparente.png"
-        Id3.ImageUrl = "~/resources/transparente.png"
-        Ie3.ImageUrl = "~/resources/transparente.png"
-        Ih3.ImageUrl = "~/resources/transparente.png"
-        Ig3.ImageUrl = "~/resources/transparente.png"
-        If3.ImageUrl = "~/resources/transparente.png"
-        Ia4.ImageUrl = "~/resources/transparente.png"
-        Ib4.ImageUrl = "~/resources/transparente.png"
-        Ic4.ImageUrl = "~/resources/transparente.png"
-        Id4.ImageUrl = "~/resources/transparente.png"
-        Ie4.ImageUrl = "~/resources/transparente.png"
-        If4.ImageUrl = "~/resources/transparente.png"
-        Ig4.ImageUrl = "~/resources/transparente.png"
-        Ih4.ImageUrl = "~/resources/transparente.png"
-        Ia5.ImageUrl = "~/resources/transparente.png"
-        Ib5.ImageUrl = "~/resources/transparente.png"
-        Ic5.ImageUrl = "~/resources/transparente.png"
-        Id5.ImageUrl = "~/resources/transparente.png"
-        Ie5.ImageUrl = "~/resources/transparente.png"
-        Ih5.ImageUrl = "~/resources/transparente.png"
-        Ig5.ImageUrl = "~/resources/transparente.png"
-        If5.ImageUrl = "~/resources/transparente.png"
-        Ia6.ImageUrl = "~/resources/transparente.png"
-        Ib6.ImageUrl = "~/resources/transparente.png"
-        Ic6.ImageUrl = "~/resources/transparente.png"
-        Id6.ImageUrl = "~/resources/transparente.png"
-        Ie6.ImageUrl = "~/resources/transparente.png"
-        If6.ImageUrl = "~/resources/transparente.png"
-        Ig6.ImageUrl = "~/resources/transparente.png"
-        Ih6.ImageUrl = "~/resources/transparente.png"
-        Ia8.ImageUrl = "~/resources/transparente.png"
-        Ib8.ImageUrl = "~/resources/transparente.png"
-        Ic8.ImageUrl = "~/resources/transparente.png"
-        Id8.ImageUrl = "~/resources/transparente.png"
-        Ie8.ImageUrl = "~/resources/transparente.png"
-        ih8.ImageUrl = "~/resources/transparente.png"
-        Ig8.ImageUrl = "~/resources/transparente.png"
-        If8.ImageUrl = "~/resources/transparente.png"
-        Ia7.ImageUrl = "~/resources/transparente.png"
-        Ib7.ImageUrl = "~/resources/transparente.png"
-        Ic7.ImageUrl = "~/resources/transparente.png"
-        Id7.ImageUrl = "~/resources/transparente.png"
-        Ie7.ImageUrl = "~/resources/transparente.png"
-        If7.ImageUrl = "~/resources/transparente.png"
-        Ig7.ImageUrl = "~/resources/transparente.png"
-        Ih7.ImageUrl = "~/resources/transparente.png"
-    End Sub
+
     Public Sub LaukiakGarbitu()
         For Each laukia As Gelaxka In Session("partida").Taula
             '1 ILARA
@@ -1754,6 +1694,38 @@
         Next
     End Sub
     Public Sub Hasieratu(Kolorea As Koloreak)
+        Ia3.ImageUrl = "~/resources/transparente.png"
+        Ib3.ImageUrl = "~/resources/transparente.png"
+        Ic3.ImageUrl = "~/resources/transparente.png"
+        Id3.ImageUrl = "~/resources/transparente.png"
+        Ie3.ImageUrl = "~/resources/transparente.png"
+        Ih3.ImageUrl = "~/resources/transparente.png"
+        Ig3.ImageUrl = "~/resources/transparente.png"
+        If3.ImageUrl = "~/resources/transparente.png"
+        Ia4.ImageUrl = "~/resources/transparente.png"
+        Ib4.ImageUrl = "~/resources/transparente.png"
+        Ic4.ImageUrl = "~/resources/transparente.png"
+        Id4.ImageUrl = "~/resources/transparente.png"
+        Ie4.ImageUrl = "~/resources/transparente.png"
+        If4.ImageUrl = "~/resources/transparente.png"
+        Ig4.ImageUrl = "~/resources/transparente.png"
+        Ih4.ImageUrl = "~/resources/transparente.png"
+        Ia5.ImageUrl = "~/resources/transparente.png"
+        Ib5.ImageUrl = "~/resources/transparente.png"
+        Ic5.ImageUrl = "~/resources/transparente.png"
+        Id5.ImageUrl = "~/resources/transparente.png"
+        Ie5.ImageUrl = "~/resources/transparente.png"
+        Ih5.ImageUrl = "~/resources/transparente.png"
+        Ig5.ImageUrl = "~/resources/transparente.png"
+        If5.ImageUrl = "~/resources/transparente.png"
+        Ia6.ImageUrl = "~/resources/transparente.png"
+        Ib6.ImageUrl = "~/resources/transparente.png"
+        Ic6.ImageUrl = "~/resources/transparente.png"
+        Id6.ImageUrl = "~/resources/transparente.png"
+        Ie6.ImageUrl = "~/resources/transparente.png"
+        If6.ImageUrl = "~/resources/transparente.png"
+        Ig6.ImageUrl = "~/resources/transparente.png"
+        Ih6.ImageUrl = "~/resources/transparente.png"
         If Kolorea = Koloreak.Txuria Then
             Ia1.ImageUrl = "~/resources/Dorrea_T.png"
             Ib1.ImageUrl = "~/resources/Zaldia_T.png"

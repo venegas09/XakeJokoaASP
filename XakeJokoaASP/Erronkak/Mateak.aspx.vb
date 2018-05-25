@@ -5,39 +5,6 @@ Public Class Xakeak
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            'XML-a kargatu
-            Dim xmlErronkak As New XmlDocument
-            xmlErronkak.Load(Server.MapPath("Erronkak.xml"))
-            Session("xmlErronkak") = xmlErronkak
-            Dim xmlErronkaNode As XmlNode
-            xmlErronkaNode = xmlErronkak.DocumentElement.SelectSingleNode("/erronkak/erronka[@id='" + Session("erronka") + "']")
-            Session("xmlErronkaNode") = xmlErronkaNode
-            Session("xmlMugKopTotala") = Session("xmlErronkaNode").item("mugKop").innerText
-            Session("xmlMugKopOrain") = Session("xmlErronkaNode").item("mugKop").innerText
-
-            Dim Partida As New XakePartida()
-            Session("partida") = Partida
-            If Session("xmlErronkaNode").item("kolorea").innerText = "Txuria" Then
-                Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten
-            Else
-                Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten
-            End If
-            Dim MarraztutakoGelaxkak As New List(Of Gelaxka)
-            Session("MarraztutakoGelaxkak") = MarraztutakoGelaxkak
-            Dim AukeratutakoBox As New Object()
-            Session("AukeratutakoBox") = AukeratutakoBox
-            If Session("xmlErronkaNode").item("kolorea").innerText = "Txuria" Then
-                rdKol.SelectedValue = "Txuriak"
-                pTablero.BackImageUrl = "~/resources/XakeTaula.png"
-                txtXake.Text = ""
-            Else
-                rdKol.SelectedValue = "Beltzak"
-                pTablero.BackImageUrl = "~/resources/XakeTaula2.png"
-                txtXake.Text = ""
-            End If
-            txtMugKop.Text = "Mugimendu kopurua: " + Session("xmlMugKopOrain").ToString
-            btnHasi.Enabled = True
-            btnPista.Enabled = True
             Hasieratu()
         End If
     End Sub
@@ -47,6 +14,42 @@ Public Class Xakeak
     End Sub
 
     Public Sub Hasieratu()
+        Garbitu()
+        'XML-a kargatu
+        Dim xmlErronkak As New XmlDocument
+        xmlErronkak.Load(Server.MapPath("Erronkak.xml"))
+        Session("xmlErronkak") = xmlErronkak
+        Dim xmlErronkaNode As XmlNode
+        xmlErronkaNode = xmlErronkak.DocumentElement.SelectSingleNode("/erronkak/erronka[@id='" + Session("erronka") + "']")
+        Session("xmlErronkaNode") = xmlErronkaNode
+        Session("xmlMugKopTotala") = Session("xmlErronkaNode").item("mugKop").innerText
+        Session("xmlMugKopOrain") = Session("xmlErronkaNode").item("mugKop").innerText
+
+        Dim Partida As New XakePartida()
+        Session("partida") = Partida
+        If Session("xmlErronkaNode").item("kolorea").innerText = "Txuria" Then
+            Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten
+        Else
+            Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten
+        End If
+        Dim MarraztutakoGelaxkak As New List(Of Gelaxka)
+        Session("MarraztutakoGelaxkak") = MarraztutakoGelaxkak
+        Dim AukeratutakoBox As New Object()
+        Session("AukeratutakoBox") = AukeratutakoBox
+        If Session("xmlErronkaNode").item("kolorea").innerText = "Txuria" Then
+            rdKol.SelectedValue = "Txuriak"
+            pTablero.BackImageUrl = "~/resources/XakeTaula.png"
+            txtXake.Text = ""
+        Else
+            rdKol.SelectedValue = "Beltzak"
+            pTablero.BackImageUrl = "~/resources/XakeTaula2.png"
+            txtXake.Text = ""
+        End If
+        txtMugKop.Text = "Mugimendu kopurua: " + Session("xmlMugKopOrain").ToString
+        txtPista.Text = ""
+        btnPista.Enabled = True
+        Panel3.Enabled = True
+        btnHasi.Enabled = False
         Dim piezaImg As String
         Dim pieza As XakePieza
         For Each pos In Session("xmlErronkaNode").item("posizioa").SelectNodes("pieza")
@@ -283,6 +286,73 @@ Public Class Xakeak
                     Session("partida").Taula.gelaxkaLortu(8, 8).Pieza = pieza
             End Select
         Next
+    End Sub
+
+    Public Sub Garbitu()
+        Ia1.ImageUrl = "~/resources/transparente.png"
+        Ib1.ImageUrl = "~/resources/transparente.png"
+        Ic1.ImageUrl = "~/resources/transparente.png"
+        Id1.ImageUrl = "~/resources/transparente.png"
+        Ie1.ImageUrl = "~/resources/transparente.png"
+        Ih1.ImageUrl = "~/resources/transparente.png"
+        Ig1.ImageUrl = "~/resources/transparente.png"
+        If1.ImageUrl = "~/resources/transparente.png"
+        Ia2.ImageUrl = "~/resources/transparente.png"
+        Ib2.ImageUrl = "~/resources/transparente.png"
+        Ic2.ImageUrl = "~/resources/transparente.png"
+        Id2.ImageUrl = "~/resources/transparente.png"
+        Ie2.ImageUrl = "~/resources/transparente.png"
+        If2.ImageUrl = "~/resources/transparente.png"
+        Ig2.ImageUrl = "~/resources/transparente.png"
+        Ih2.ImageUrl = "~/resources/transparente.png"
+        Ia3.ImageUrl = "~/resources/transparente.png"
+        Ib3.ImageUrl = "~/resources/transparente.png"
+        Ic3.ImageUrl = "~/resources/transparente.png"
+        Id3.ImageUrl = "~/resources/transparente.png"
+        Ie3.ImageUrl = "~/resources/transparente.png"
+        Ih3.ImageUrl = "~/resources/transparente.png"
+        Ig3.ImageUrl = "~/resources/transparente.png"
+        If3.ImageUrl = "~/resources/transparente.png"
+        Ia4.ImageUrl = "~/resources/transparente.png"
+        Ib4.ImageUrl = "~/resources/transparente.png"
+        Ic4.ImageUrl = "~/resources/transparente.png"
+        Id4.ImageUrl = "~/resources/transparente.png"
+        Ie4.ImageUrl = "~/resources/transparente.png"
+        If4.ImageUrl = "~/resources/transparente.png"
+        Ig4.ImageUrl = "~/resources/transparente.png"
+        Ih4.ImageUrl = "~/resources/transparente.png"
+        Ia5.ImageUrl = "~/resources/transparente.png"
+        Ib5.ImageUrl = "~/resources/transparente.png"
+        Ic5.ImageUrl = "~/resources/transparente.png"
+        Id5.ImageUrl = "~/resources/transparente.png"
+        Ie5.ImageUrl = "~/resources/transparente.png"
+        Ih5.ImageUrl = "~/resources/transparente.png"
+        Ig5.ImageUrl = "~/resources/transparente.png"
+        If5.ImageUrl = "~/resources/transparente.png"
+        Ia6.ImageUrl = "~/resources/transparente.png"
+        Ib6.ImageUrl = "~/resources/transparente.png"
+        Ic6.ImageUrl = "~/resources/transparente.png"
+        Id6.ImageUrl = "~/resources/transparente.png"
+        Ie6.ImageUrl = "~/resources/transparente.png"
+        If6.ImageUrl = "~/resources/transparente.png"
+        Ig6.ImageUrl = "~/resources/transparente.png"
+        Ih6.ImageUrl = "~/resources/transparente.png"
+        Ia8.ImageUrl = "~/resources/transparente.png"
+        Ib8.ImageUrl = "~/resources/transparente.png"
+        Ic8.ImageUrl = "~/resources/transparente.png"
+        Id8.ImageUrl = "~/resources/transparente.png"
+        Ie8.ImageUrl = "~/resources/transparente.png"
+        ih8.ImageUrl = "~/resources/transparente.png"
+        Ig8.ImageUrl = "~/resources/transparente.png"
+        If8.ImageUrl = "~/resources/transparente.png"
+        Ia7.ImageUrl = "~/resources/transparente.png"
+        Ib7.ImageUrl = "~/resources/transparente.png"
+        Ic7.ImageUrl = "~/resources/transparente.png"
+        Id7.ImageUrl = "~/resources/transparente.png"
+        Ie7.ImageUrl = "~/resources/transparente.png"
+        If7.ImageUrl = "~/resources/transparente.png"
+        Ig7.ImageUrl = "~/resources/transparente.png"
+        Ih7.ImageUrl = "~/resources/transparente.png"
     End Sub
 
     Protected Sub Ia1_Click(sender As Object, e As ImageClickEventArgs) Handles Ia1.Click
@@ -541,7 +611,7 @@ Public Class Xakeak
         Dim aukeratutakoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(i, z)
         If (Session("partida").Egoera = PartidarenEgoera.TxuriakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Txuria") Or (Session("partida").Egoera = PartidarenEgoera.BeltzakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Beltza") Then
             txtXake.Text = "Irabazi duzu!"
-            btnHasi.Enabled = False
+            btnHasi.Enabled = True
             btnPista.Enabled = False
         End If
         If (Session("partida").Egoera = PartidarenEgoera.TxurieiItxoiten And Session("xmlErronkaNode").item("kolorea").innerText = "Txuria") Or (Session("partida").Egoera = PartidarenEgoera.BeltzeiItxoiten And Session("xmlErronkaNode").item("kolorea").innerText = "Beltza") Then
@@ -554,7 +624,7 @@ Public Class Xakeak
         Else
             If (Session("partida").Egoera = PartidarenEgoera.TxuriakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Txuria") Or (Session("partida").Egoera = PartidarenEgoera.BeltzakWin And Session("xmlErronkaNode").item("kolorea").innerText = "Beltza") Then
                 txtXake.Text = "Irabazi duzu!"
-                btnHasi.Enabled = False
+                btnHasi.Enabled = True
                 btnPista.Enabled = False
             Else
                 Dim gelaxkaZaharra As Gelaxka
@@ -577,14 +647,14 @@ Public Class Xakeak
                         If Session("partida").Taula.MugimendurikEz(Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea) Then
                             If Session("partida").Taula.gelaxkaLortu(i, z).Pieza.Kolorea = Koloreak.Txuria Then
                                 Session("partida").Egoera = PartidarenEgoera.TxuriakWin
-                                txtXake.Text = "Txuriak Irabazi du"
+                                txtXake.Text = "Irabazi duzu!"
+                                btnHasi.Enabled = True
                                 btnPista.Enabled = False
-                                btnHasi.Enabled = False
                             Else
                                 Session("partida").Egoera = PartidarenEgoera.BeltzakWin
-                                txtXake.Text = "Beltzak irabazi du"
+                                txtXake.Text = "Galdu duzu!"
+                                btnHasi.Enabled = True
                                 btnPista.Enabled = False
-                                btnHasi.Enabled = False
                             End If
                         End If
                     Else
@@ -593,9 +663,37 @@ Public Class Xakeak
                             txtXake.Text = "Erregea itota dago"
                         End If
                     End If
-                    Session("xmlMugKopOrain") = Session("xmlMugKopOrain") - 1
-                    txtMugKop.Text = "Mugimendu kopurua: " + Session("xmlMugKopOrain").ToString
-                    txtPista.Text = ""
+                    Dim mugZenb As String = (Session("xmlMugKopTotala") - Session("xmlMugKopOrain") + 1)
+                    Dim mugimendua As XmlElement = Session("xmlErronkak").DocumentElement.SelectSingleNode("/erronkak/erronka[@id='" + Session("erronka") + "']/mugimenduak/mugimendua[@zenb='" + mugZenb.ToString + "']").item("move")
+                    Dim mugimenduaAuto As XmlElement = Session("xmlErronkak").DocumentElement.SelectSingleNode("/erronkak/erronka[@id='" + Session("erronka") + "']/mugimenduak/mugimendua[@zenb='" + mugZenb.ToString + "']").item("moveAutom")
+                    If TratatuFrom(mugimendua.InnerText).Substring(0, 1) = gelaxkaZaharra.Ilara.ToString And TratatuFrom(mugimendua.InnerText).Substring(1, 1) = gelaxkaZaharra.Zutabea.ToString Then
+                        If TratatuTo(mugimendua.InnerText).Substring(0, 1) = aukeratutakoGelaxka.Ilara.ToString And TratatuTo(mugimendua.InnerText).Substring(1, 1) = aukeratutakoGelaxka.Zutabea.ToString Then
+                            Session("xmlMugKopOrain") = Session("xmlMugKopOrain") - 1
+                            txtMugKop.Text = "Mugimendu kopurua: " + Session("xmlMugKopOrain").ToString
+                            txtPista.Text = ""
+                            Try
+                                Dim unekoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(CInt(TratatuFrom(mugimenduaAuto.InnerText).Substring(0, 1)), CInt(TratatuFrom(mugimenduaAuto.InnerText).Substring(1, 1)))
+                                Dim hurrengoGelaxka As Gelaxka = Session("partida").Taula.gelaxkaLortu(CInt(TratatuTo(mugimenduaAuto.InnerText).Substring(0, 1)), CInt(TratatuTo(mugimenduaAuto.InnerText).Substring(1, 1)))
+                                Session("partida").selectPiece(unekoGelaxka)
+                                Session("partida").MoveToSquare(hurrengoGelaxka)
+                                PiezaMugituAuto(unekoGelaxka, hurrengoGelaxka)
+                            Catch ex As Exception
+
+                            End Try
+                        Else
+                            Panel3.Enabled = False
+                            btnHasi.Enabled = True
+                            btnPista.Enabled = False
+                            txtXake.Text = "Gaizki mugitu duzu! Berriro hasi."
+                            txtPista.Text = ""
+                        End If
+                    Else
+                        Panel3.Enabled = False
+                        btnHasi.Enabled = True
+                        btnPista.Enabled = False
+                        txtXake.Text = "Gaizki mugitu duzu! Berriro hasi."
+                        txtPista.Text = ""
+                    End If
                 Else
                     EzabatuAukeratutakoGelaxka(gelaxkaZaharra)
                     MarrazkiaKendu()
@@ -605,6 +703,246 @@ Public Class Xakeak
             End If
         End If
     End Sub
+    Public Sub PiezaMugituAuto(from As Gelaxka, toMove As Gelaxka)
+        Dim irudia As String = String.Format("{0}_{1}", toMove.Pieza.GetType().Name, IIf([Enum].GetName(GetType(Koloreak), toMove.Pieza.Kolorea) = [Enum].GetName(GetType(Koloreak), Koloreak.Txuria), "T", "B"))
+        irudia = "~/resources/" + irudia + ".png"
+        PiezaJarri(toMove, irudia)
+        PiezaEzabatu(from)
+    End Sub
+    Public Sub PiezaJarri(laukia As Gelaxka, irudia As String)
+        If laukia.Ilara = 1 And laukia.Zutabea = 1 Then
+            Ia1.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 2 Then
+            Ib1.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 3 Then
+            Ic1.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 4 Then
+            Id1.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 5 Then
+            Ie1.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 6 Then
+            If1.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 7 Then
+            Ig1.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 1 And laukia.Zutabea = 8 Then
+            Ih1.ImageUrl = irudia
+        End If
+        '2 ILARA
+        If laukia.Ilara = 2 And laukia.Zutabea = 1 Then
+            Ia2.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 2 Then
+            Ib2.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 3 Then
+            Ic2.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 4 Then
+            Id2.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 5 Then
+            Ie2.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 6 Then
+            If2.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 7 Then
+            Ig2.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 2 And laukia.Zutabea = 8 Then
+            Ih2.ImageUrl = irudia
+        End If
+        '3 ILARA
+        If laukia.Ilara = 3 And laukia.Zutabea = 1 Then
+            Ia3.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 2 Then
+            Ib3.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 3 Then
+            Ic3.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 4 Then
+            Id3.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 5 Then
+            Ie3.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 6 Then
+            If3.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 7 Then
+            Ig3.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 3 And laukia.Zutabea = 8 Then
+            Ih3.ImageUrl = irudia
+        End If
+        '4ILARA
+        If laukia.Ilara = 4 And laukia.Zutabea = 1 Then
+            Ia4.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 2 Then
+            Ib4.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 3 Then
+            Ic4.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 4 Then
+            Id4.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 5 Then
+            Ie4.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 6 Then
+            If4.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 7 Then
+            Ig4.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 4 And laukia.Zutabea = 8 Then
+            Ih4.ImageUrl = irudia
+        End If
+        '5 ILARA
+        If laukia.Ilara = 5 And laukia.Zutabea = 1 Then
+            Ia5.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 2 Then
+            Ib5.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 3 Then
+            Ic5.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 4 Then
+            Id5.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 5 Then
+            Ie5.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 6 Then
+            If5.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 7 Then
+            Ig5.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 5 And laukia.Zutabea = 8 Then
+            Ih5.ImageUrl = irudia
+        End If
+        '6 ILARA
+        If laukia.Ilara = 6 And laukia.Zutabea = 1 Then
+            Ia6.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 2 Then
+            Ib6.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 3 Then
+            Ic6.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 4 Then
+            Id6.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 5 Then
+            Ie6.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 6 Then
+            If6.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 7 Then
+            Ig6.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 6 And laukia.Zutabea = 8 Then
+            Ih6.ImageUrl = irudia
+        End If
+        '7 ILARA
+        If laukia.Ilara = 7 And laukia.Zutabea = 1 Then
+            Ia7.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 2 Then
+            Ib7.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 3 Then
+            Ic7.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 4 Then
+            Id7.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 5 Then
+            Ie7.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 6 Then
+            If7.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 7 Then
+            Ig7.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 7 And laukia.Zutabea = 8 Then
+            Ih7.ImageUrl = irudia
+        End If
+        '8 ILARA
+        If laukia.Ilara = 8 And laukia.Zutabea = 1 Then
+            Ia8.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 2 Then
+            Ib8.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 3 Then
+            Ic8.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 4 Then
+            Id8.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 5 Then
+            Ie8.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 6 Then
+            If8.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 7 Then
+            Ig8.ImageUrl = irudia
+        End If
+        If laukia.Ilara = 8 And laukia.Zutabea = 8 Then
+            ih8.ImageUrl = irudia
+        End If
+    End Sub
+    Public Function ItzuliZut(zut As String) As Integer
+        Select Case zut
+            Case "a"
+                Return 1
+            Case "b"
+                Return 2
+            Case "c"
+                Return 3
+            Case "d"
+                Return 4
+            Case "e"
+                Return 5
+            Case "f"
+                Return 6
+            Case "g"
+                Return 7
+            Case "h"
+                Return 8
+            Case Else
+                Return -1
+        End Select
+    End Function
+    Public Function TratatuFrom(move As String) As String
+        Dim from As String = move.Substring(0, 2)
+        Dim zut = ItzuliZut(from.Substring(0, 1))
+        Return from.Substring(1, 1) & zut
+    End Function
+    Public Function TratatuTo(move As String) As String
+        Dim toMove As String
+        toMove = move.Substring(2, 2)
+        Dim zut = ItzuliZut(toMove.Substring(0, 1))
+        Return toMove.Substring(1, 1) & zut
+    End Function
 
     Public Sub MarraztuAukeratutakoGelaxka(laukia As Gelaxka)
         If laukia.Ilara = 1 And laukia.Zutabea = 1 Then

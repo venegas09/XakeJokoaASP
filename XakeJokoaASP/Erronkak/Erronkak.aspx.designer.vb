@@ -41,33 +41,6 @@ Partial Public Class Erronkak
     Protected WithEvents btnItzuli As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control btnReto1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnReto1 As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
-    '''Control btnReto2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnReto2 As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
-    '''Control btnReto3.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnReto3 As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
     '''Control btnXake1.
     '''</summary>
     '''<remarks>
@@ -93,4 +66,31 @@ Partial Public Class Erronkak
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnXake3 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''Control btnXake4.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnXake4 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''Control btnXake5.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnXake5 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''Control btnXake6.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnXake6 As Global.System.Web.UI.WebControls.ImageButton
 End Class

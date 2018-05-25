@@ -123,11 +123,13 @@
     <Content Include="resources\Peoia_T.png" />
     <Content Include="resources\posibleB.JPG" />
     <Content Include="resources\posibleT.JPG" />
-    <Content Include="resources\reto1.png" />
     <Content Include="resources\transparente.png" />
     <Content Include="resources\xake1.jpg" />
     <Content Include="resources\xake2.PNG" />
     <Content Include="resources\xake3.PNG" />
+    <Content Include="resources\xake4.PNG" />
+    <Content Include="resources\xake5.PNG" />
+    <Content Include="resources\xake6.PNG" />
     <Content Include="resources\XakeTaula.png" />
     <Content Include="resources\XakeTaula2.png" />
     <Content Include="resources\Zaldia_B.png" />
